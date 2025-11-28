@@ -15,8 +15,8 @@ import FrenchTip from "@/assets/FrenchTip.jpg";
 import Nailart from "@/assets/Nailart.jpg";
 import Spa from "@/assets/Spa.jpg";
 import Salon from "@/assets/Salon.jpg";
-import SkinGlow from "@/assets/SkinGlow.jpg";
-import SkinCare from "@/assets/SkinCare.jpg";
+import SkinGlow from "@/assets/Skinglow.jpg";
+import SkinCare from "@/assets/Skincare.jpg";
 import EyeLash from "@/assets/EyeLash.jpg";
 
 

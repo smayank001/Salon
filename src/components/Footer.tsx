@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
-import { 
-  Instagram, 
-  Facebook, 
-  Phone, 
-  Mail, 
-  MapPin, 
+import {
+  Instagram,
+  Facebook,
+  Phone,
+  Mail,
+  MapPin,
   Clock,
   Sparkles,
-  Heart
+  Heart,
 } from "lucide-react";
 
 const quickLinks = [
@@ -41,14 +41,14 @@ export const Footer = () => {
           <div className="space-y-6">
             <div>
               <h3 className="font-serif text-3xl font-semibold text-champagne">
-                PolishedNailss
+                PolishedNails
               </h3>
               <p className="text-gold text-sm tracking-widest uppercase mt-1">
                 Luxury Beauty
               </p>
             </div>
             <p className="text-champagne/70 leading-relaxed">
-              Experience the art of self-care at its finest. Where luxury meets 
+              Experience the art of self-care at its finest. Where luxury meets
               precision, and every visit becomes a cherished ritual.
             </p>
             <div className="flex gap-4">
@@ -117,28 +117,35 @@ export const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-gold mt-1 flex-shrink-0" />
                 <span className="text-champagne/70">
-                  123 Luxury Lane<br />
-                  Beverly Hills, CA 90210
+                  11434 Olio Rd
+                  <br />
+                  Fishers, IN 46037
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-gold flex-shrink-0" />
-                <a href="tel:+15551234567" className="text-champagne/70 hover:text-gold transition-colors">
-                  (555) 123-4567
+                <a
+                  href="tel:+13175777888"
+                  className="text-champagne/70 hover:text-gold transition-colors"
+                >
+                  +1 317-577-7888
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-gold flex-shrink-0" />
-                <a href="mailto:hello@polishednailss.com" className="text-champagne/70 hover:text-gold transition-colors">
-                  hello@polishednailss.com
+                <a
+                  href="mailto:hello@polishednails.com"
+                  className="text-champagne/70 hover:text-gold transition-colors"
+                >
+                  hello@polishednails.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock size={18} className="text-gold mt-1 flex-shrink-0" />
                 <div className="text-champagne/70 text-sm">
-                  <p>Mon - Fri: 9AM - 7PM</p>
-                  <p>Saturday: 10AM - 6PM</p>
-                  <p>Sunday: 11AM - 5PM</p>
+                  <p>Mon - Fri: 9:30AM - 7:30PM</p>
+                  <p>Saturday: 9:00AM - 7:00PM</p>
+                  <p>Sunday: 11:00AM - 5:00PM</p>
                 </div>
               </li>
             </ul>
@@ -149,7 +156,7 @@ export const Footer = () => {
         <div className="mt-16 pt-8 border-t border-gold/20">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-champagne/50 text-sm">
-              © {new Date().getFullYear()} PolishedNailss. All rights reserved.
+              © {new Date().getFullYear()} PolishedNails. All rights reserved.
             </p>
             {/* <p className="text-champagne/50 text-sm flex items-center gap-1">
               Crafted with <Heart size={14} className="text-gold" /> for beauty lovers

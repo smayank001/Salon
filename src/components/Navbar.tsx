@@ -64,13 +64,10 @@ export const Navbar = () => {
           </div>
 
           {/* Logo - Center */}
-          <Link
-            to="/"
-            className="flex flex-col items-center relative group"
-          >
+          <Link to="/" className="flex flex-col items-center relative group">
             <div className="absolute inset-0 bg-gold/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <span className="font-serif text-2xl md:text-3xl font-semibold text-plum relative">
-              PolishedNailss
+              PolishedNails
             </span>
             <span className="text-[10px] tracking-[0.3em] text-gold font-sans uppercase">
               Luxury Beauty

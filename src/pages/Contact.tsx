@@ -6,41 +6,41 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
   Send,
   Instagram,
   Facebook,
-  Sparkles
+  Sparkles,
 } from "lucide-react";
 
 const contactInfo = [
   {
     icon: <MapPin className="w-6 h-6" />,
     title: "Visit Us",
-    content: "123 Luxury Lane\nBeverly Hills, CA 90210",
-    link: "https://maps.google.com",
+    content: "11434 Olio Rd\nFishers, IN 46037",
+    link: "https://maps.google.com/maps?q=11434+Olio+Rd,+Fishers,+IN+46037",
   },
   {
     icon: <Phone className="w-6 h-6" />,
     title: "Call Us",
-    content: "(555) 123-4567",
-    link: "tel:+15551234567",
+    content: "+1 317-577-7888",
+    link: "tel:+13175777888",
   },
   {
     icon: <Mail className="w-6 h-6" />,
     title: "Email Us",
-    content: "hello@polishednailss.com",
-    link: "mailto:hello@polishednailss.com",
+    content: "hello@polishednails.com",
+    link: "mailto:hello@polishednails.com",
   },
 ];
 
 const hours = [
-  { day: "Monday - Friday", time: "9:00 AM - 7:00 PM" },
-  { day: "Saturday", time: "10:00 AM - 6:00 PM" },
+  { day: "Monday - Friday", time: "9:30 AM - 7:30 PM" },
+  { day: "Saturday", time: "9:00 AM - 7:00 PM" },
   { day: "Sunday", time: "11:00 AM - 5:00 PM" },
 ];
 
@@ -56,10 +56,10 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Format the message for WhatsApp
-    const phoneNumber = "8851432459";
-    const message = `*New Message from PolishedNailss Website*
+    const phoneNumber = "+1 317-577-7888";
+    const message = `*New Message from PolishedNails Website*
 
 *Name:* ${formData.name}
 *Email:* ${formData.email}
@@ -68,21 +68,21 @@ const Contact = () => {
 
 *Message:*
 ${formData.message}`;
-    
+
     // Encode the message for URL
     const encodedMessage = encodeURIComponent(message);
-    
+
     // Create WhatsApp URL
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-    
+
     // Open WhatsApp in a new tab
-    window.open(whatsappUrl, '_blank');
-    
+    window.open(whatsappUrl, "_blank");
+
     // Show success message
     toast.success("Redirecting to WhatsApp!", {
       description: "WhatsApp will open with your message pre-filled.",
     });
-    
+
     // Reset form
     setFormData({
       name: "",
@@ -120,7 +120,7 @@ ${formData.message}`;
               <h2 className="font-serif text-2xl font-semibold text-plum mb-6">
                 Send Us a Message
               </h2>
-              
+
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid md:grid-cols-2 gap-5">
                   <div>
@@ -131,7 +131,9 @@ ${formData.message}`;
                       required
                       placeholder="Jane Doe"
                       value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, name: e.target.value })
+                      }
                       className="h-12 border-border focus:border-plum focus:ring-plum/20"
                     />
                   </div>
@@ -144,12 +146,14 @@ ${formData.message}`;
                       type="email"
                       placeholder="jane@example.com"
                       value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
                       className="h-12 border-border focus:border-plum focus:ring-plum/20"
                     />
                   </div>
                 </div>
-                
+
                 <div className="grid md:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
@@ -157,9 +161,11 @@ ${formData.message}`;
                     </label>
                     <Input
                       type="tel"
-                      placeholder="(555) 123-4567"
+                      placeholder="+1 317-577-7888"
                       value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, phone: e.target.value })
+                      }
                       className="h-12 border-border focus:border-plum focus:ring-plum/20"
                     />
                   </div>
@@ -171,12 +177,14 @@ ${formData.message}`;
                       required
                       placeholder="How can we help?"
                       value={formData.subject}
-                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, subject: e.target.value })
+                      }
                       className="h-12 border-border focus:border-plum focus:ring-plum/20"
                     />
                   </div>
                 </div>
-                
+
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Your Message *
@@ -185,12 +193,14 @@ ${formData.message}`;
                     required
                     placeholder="Tell us more about your inquiry..."
                     value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, message: e.target.value })
+                    }
                     rows={6}
                     className="border-border focus:border-plum focus:ring-plum/20"
                   />
                 </div>
-                
+
                 <Button
                   type="submit"
                   variant="hero"
@@ -225,8 +235,12 @@ ${formData.message}`;
                       {info.icon}
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">{info.title}</h3>
-                      <p className="text-muted-foreground whitespace-pre-line">{info.content}</p>
+                      <h3 className="font-semibold text-foreground mb-1">
+                        {info.title}
+                      </h3>
+                      <p className="text-muted-foreground whitespace-pre-line">
+                        {info.content}
+                      </p>
                     </div>
                   </a>
                 ))}
@@ -236,7 +250,9 @@ ${formData.message}`;
               <div className="bg-blush rounded-xl p-6 mb-8">
                 <div className="flex items-center gap-3 mb-4">
                   <Clock className="w-6 h-6 text-gold" />
-                  <h3 className="font-serif text-xl font-semibold text-plum">Opening Hours</h3>
+                  <h3 className="font-serif text-xl font-semibold text-plum">
+                    Opening Hours
+                  </h3>
                 </div>
                 <div className="space-y-3">
                   {hours.map((item) => (
@@ -250,7 +266,9 @@ ${formData.message}`;
 
               {/* Social Links */}
               <div>
-                <h3 className="font-semibold text-foreground mb-4">Follow Us</h3>
+                <h3 className="font-semibold text-foreground mb-4">
+                  Follow Us
+                </h3>
                 <div className="flex gap-4">
                   <a
                     href="https://instagram.com"
@@ -278,14 +296,14 @@ ${formData.message}`;
       {/* Map Section */}
       <section className="h-96 bg-blush relative">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26430.393553120906!2d-118.43209796322542!3d34.07362782167652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc04d6d147ab%3A0xd6c7c379fd081ed1!2sBeverly%20Hills%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1699999999999!5m2!1sen!2s"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.3249414407596!2d-85.92195482401175!3d39.956487171517296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8814ca64a4d3ffff%3A0x5f02cc043bfc026f!2s11434%20Olio%20Rd%2C%20Fishers%2C%20IN%2046037%2C%20USA!5e0!3m2!1sen!2sin!4v1764701883043!5m2!1sen!2sin"
           width="100%"
           height="100%"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="PolishedNailss Location"
+          title="PolishedNails Location"
           className="grayscale contrast-125 opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
         />
       </section>

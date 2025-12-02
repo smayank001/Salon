@@ -10,15 +10,13 @@ import Salon from "@/assets/Salon.jpg";
 const testimonials = [
   {
     name: "Sophia Martinez",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop",
-    text: "Absolutely divine experience! My nails have never looked this elegant. The attention to detail is impeccable, and the ambiance makes every visit feel like a retreat. I've recommended PolishedNailss to all my friends!",
+    text: "Absolutely divine experience! My nails have never looked this elegant. The attention to detail is impeccable, and the ambiance makes every visit feel like a retreat. I've recommended PolishedNails to all my friends!",
     rating: 5,
     service: "Signature Gel Manicure",
     date: "November 2024",
   },
   {
     name: "Isabella Chen",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop",
     text: "The best facial I've ever had! My skin is glowing and feels incredibly hydrated. The esthetician really understood my skin concerns and customized the treatment perfectly. I'm officially a client for life.",
     rating: 5,
     service: "Hydrating Facial",
@@ -26,7 +24,6 @@ const testimonials = [
   },
   {
     name: "Emma Thompson",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop",
     text: "My lash extensions are absolutely perfect! Natural yet glamorous, exactly what I wanted. The artist really listened to what I envisioned and exceeded all my expectations. Wake up beautiful every day!",
     rating: 5,
     service: "Volume Lash Extensions",
@@ -34,7 +31,6 @@ const testimonials = [
   },
   {
     name: "Olivia Williams",
-    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&h=200&fit=crop",
     text: "I was nervous about waxing, but the therapist made me feel so comfortable. The technique was gentle yet effective, and my skin has never been smoother. The premium products they use really make a difference!",
     rating: 5,
     service: "Full Body Waxing",
@@ -42,7 +38,6 @@ const testimonials = [
   },
   {
     name: "Ava Johnson",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop",
     text: "The Royal Signature Facial was worth every penny! My skin looked years younger after just one session. The luxurious products and expert technique combined made this an unforgettable experience.",
     rating: 5,
     service: "Royal Signature Facial",
@@ -50,7 +45,6 @@ const testimonials = [
   },
   {
     name: "Mia Davis",
-    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200&h=200&fit=crop",
     text: "Been coming here for over a year and the quality never disappoints. The nail art is stunning, the staff remembers my preferences, and the salon is always immaculate. This is my happy place!",
     rating: 5,
     service: "Nail Art & Design",
@@ -58,7 +52,6 @@ const testimonials = [
   },
   {
     name: "Charlotte Brown",
-    image: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=200&h=200&fit=crop",
     text: "Found my forever salon! The hybrid lashes are so lightweight I forget I'm wearing them, but I still look polished and put together. The retention is amazing too - 3+ weeks and still looking full!",
     rating: 5,
     service: "Hybrid Lash Set",
@@ -66,7 +59,6 @@ const testimonials = [
   },
   {
     name: "Amelia Garcia",
-    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=200&h=200&fit=crop",
     text: "The attention to hygiene here is outstanding. Every tool is sterilized, and they use fresh supplies for each client. As someone who values cleanliness, this gives me complete peace of mind.",
     rating: 5,
     service: "Gel Extensions",
@@ -74,7 +66,6 @@ const testimonials = [
   },
   {
     name: "Harper Wilson",
-    image: "https://images.unsplash.com/photo-1502323777036-f29e3972f82c?w=200&h=200&fit=crop",
     text: "Treated myself to a full pamper day and left feeling like a queen! The coordination between services was seamless, and every single treatment exceeded expectations. Pure luxury from start to finish.",
     rating: 5,
     service: "Full Pamper Package",
@@ -95,7 +86,7 @@ const Testimonials = () => {
             <SectionHeading
               badge="Client Love"
               title="Real Stories, Real Results"
-              subtitle="Don't just take our word for it — hear from the thousands of happy clients who've experienced the PolishedNailss difference."
+              subtitle="Don't just take our word for it — hear from the thousands of happy clients who've experienced the PolishedNails difference."
             />
 
             {/* Stats */}
@@ -106,7 +97,9 @@ const Testimonials = () => {
                 { number: "250+", label: "5-Star Reviews" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
-                  <p className="font-serif text-2xl md:text-3xl font-bold text-plum">{stat.number}</p>
+                  <p className="font-serif text-2xl md:text-3xl font-bold text-plum">
+                    {stat.number}
+                  </p>
                   <p className="text-sm text-muted-foreground">{stat.label}</p>
                 </div>
               ))}
@@ -134,16 +127,14 @@ const Testimonials = () => {
           <div className="max-w-4xl mx-auto text-center">
             <Quote className="w-16 h-16 mx-auto text-gold/30 mb-6" />
             <p className="font-serif text-2xl md:text-3xl italic leading-relaxed mb-8">
-              "PolishedNailss has completely transformed my self-care routine. The quality, 
-              the atmosphere, the attention to detail — everything is simply unmatched. 
-              This isn't just a salon; it's a sanctuary."
+              "PolishedNails has completely transformed my self-care routine.
+              The quality, the atmosphere, the attention to detail — everything
+              is simply unmatched. This isn't just a salon; it's a sanctuary."
             </p>
             <div className="flex items-center justify-center gap-4">
-              <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop"
-                alt="Featured client"
-                className="w-16 h-16 rounded-full border-2 border-gold"
-              />
+              <div className="w-16 h-16 rounded-full bg-gold flex items-center justify-center text-charcoal font-serif text-2xl font-bold border-2 border-gold">
+                S
+              </div>
               <div className="text-left">
                 <p className="font-semibold text-champagne">Sophia Martinez</p>
                 <p className="text-gold text-sm">VIP Member since 2020</p>
@@ -192,13 +183,13 @@ const Testimonials = () => {
 
                 {/* Author */}
                 <div className="flex items-center gap-3 pt-4 border-t border-border/50">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full border-2 border-gold/30 object-cover"
-                  />
+                  <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center text-plum font-serif text-lg font-bold border-2 border-gold/30">
+                    {testimonial.name.charAt(0)}
+                  </div>
                   <div>
-                    <p className="font-semibold text-plum">{testimonial.name}</p>
+                    <p className="font-semibold text-plum">
+                      {testimonial.name}
+                    </p>
                     <p className="text-xs text-muted-foreground">
                       {testimonial.service} • {testimonial.date}
                     </p>
@@ -254,7 +245,7 @@ const Testimonials = () => {
           <SectionHeading
             badge="Your Turn"
             title="Ready to Experience the Magic?"
-            subtitle="Join our family of happy clients and discover why PolishedNailss is Beverly Hills' favorite beauty destination."
+            subtitle="Join our family of happy clients and discover why PolishedNails is Fishers' favorite beauty destination."
           />
           <Link to="/booking">
             <Button variant="hero" size="lg" className="gold-shimmer">

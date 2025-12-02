@@ -16,28 +16,32 @@ import serviceWaxing from "@/assets/service-waxing.jpg";
 const services = [
   {
     title: "Nails",
-    description: "Signature manicures, gel extensions, and exquisite nail art crafted with precision.",
+    description:
+      "Signature manicures, gel extensions, and exquisite nail art crafted with precision.",
     image: serviceNails,
     icon: <Gem className="w-5 h-5" />,
     href: "/services#nails",
   },
   {
     title: "Facials",
-    description: "Luxurious hydrating treatments for radiant, glowing skin that speaks volumes.",
+    description:
+      "Luxurious hydrating treatments for radiant, glowing skin that speaks volumes.",
     image: serviceFacials,
     icon: <Flower2 className="w-5 h-5" />,
     href: "/services#facials",
   },
   {
     title: "Eyelashes",
-    description: "Volume, hybrid, and classic extensions for captivating, mesmerizing eyes.",
+    description:
+      "Volume, hybrid, and classic extensions for captivating, mesmerizing eyes.",
     image: serviceLashes,
     icon: <Star className="w-5 h-5" />,
     href: "/services#lashes",
   },
   {
     title: "Waxing",
-    description: "Gentle, premium waxing services for silky smooth results every time.",
+    description:
+      "Gentle, premium waxing services for silky smooth results every time.",
     image: serviceWaxing,
     icon: <Heart className="w-5 h-5" />,
     href: "/services#waxing",
@@ -47,21 +51,18 @@ const services = [
 const testimonials = [
   {
     name: "Sophia Martinez",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop",
     text: "Absolutely divine experience! My nails have never looked this elegant. The attention to detail is impeccable, and the ambiance makes every visit feel like a retreat.",
     rating: 5,
     service: "Gel Manicure",
   },
   {
     name: "Isabella Chen",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop",
     text: "The best facial I've ever had! My skin is glowing and feels incredibly hydrated. The products they use are clearly top-tier. I'm a client for life.",
     rating: 5,
     service: "Hydrating Facial",
   },
   {
     name: "Emma Thompson",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop",
     text: "My lash extensions are perfect! Natural yet glamorous, exactly what I wanted. The artist really listened to what I envisioned and exceeded expectations.",
     rating: 5,
     service: "Volume Lashes",
@@ -112,20 +113,29 @@ const Index = () => {
             </div>
 
             {/* Headline */}
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-champagne leading-tight mb-6 opacity-0 animate-fade-in-up" style={{ animationDelay: "200ms" }}>
-              PolishedNailss
+            <h1
+              className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-champagne leading-tight mb-6 opacity-0 animate-fade-in-up"
+              style={{ animationDelay: "200ms" }}
+            >
+              PolishedNails
               <span className="block text-gold mt-2">
                 Luxurious Self-Care, Perfected.
               </span>
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg md:text-xl text-champagne/80 mb-8 leading-relaxed opacity-0 animate-fade-in-up" style={{ animationDelay: "400ms" }}>
+            <p
+              className="text-lg md:text-xl text-champagne/80 mb-8 leading-relaxed opacity-0 animate-fade-in-up"
+              style={{ animationDelay: "400ms" }}
+            >
               Nails • Facials • Eyelashes • Waxing — Book your pamper ritual.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in-up" style={{ animationDelay: "600ms" }}>
+            <div
+              className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in-up"
+              style={{ animationDelay: "600ms" }}
+            >
               <Link to="/booking">
                 <Button variant="gold" size="xl" className="gold-shimmer">
                   <Sparkles className="w-5 h-5" />
@@ -154,10 +164,26 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {[
-              { icon: <Gem className="w-8 h-8" />, name: "Nails", desc: "Art & Care" },
-              { icon: <Flower2 className="w-8 h-8" />, name: "Facials", desc: "Glow & Hydrate" },
-              { icon: <Star className="w-8 h-8" />, name: "Lashes", desc: "Volume & Length" },
-              { icon: <Heart className="w-8 h-8" />, name: "Waxing", desc: "Smooth & Gentle" },
+              {
+                icon: <Gem className="w-8 h-8" />,
+                name: "Nails",
+                desc: "Art & Care",
+              },
+              {
+                icon: <Flower2 className="w-8 h-8" />,
+                name: "Facials",
+                desc: "Glow & Hydrate",
+              },
+              {
+                icon: <Star className="w-8 h-8" />,
+                name: "Lashes",
+                desc: "Volume & Length",
+              },
+              {
+                icon: <Heart className="w-8 h-8" />,
+                name: "Waxing",
+                desc: "Smooth & Gentle",
+              },
             ].map((item, index) => (
               <Link
                 key={item.name}
@@ -168,8 +194,12 @@ const Index = () => {
                 <div className="w-16 h-16 rounded-full bg-plum/10 flex items-center justify-center text-plum mb-4 group-hover:bg-plum group-hover:text-champagne transition-all duration-300">
                   {item.icon}
                 </div>
-                <h3 className="font-serif text-xl font-semibold text-plum">{item.name}</h3>
-                <p className="text-sm text-muted-foreground mt-1">{item.desc}</p>
+                <h3 className="font-serif text-xl font-semibold text-plum">
+                  {item.name}
+                </h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  {item.desc}
+                </p>
               </Link>
             ))}
           </div>
@@ -191,7 +221,9 @@ const Index = () => {
               </div>
               {/* Floating Badge */}
               <div className="absolute -bottom-6 -right-6 md:right-8 bg-plum text-champagne px-6 py-4 rounded-xl shadow-lift">
-                <p className="font-serif text-3xl font-semibold text-gold">10+</p>
+                <p className="font-serif text-3xl font-semibold text-gold">
+                  10+
+                </p>
                 <p className="text-sm">Years of Excellence</p>
               </div>
             </div>
@@ -201,21 +233,28 @@ const Index = () => {
               <SectionHeading
                 badge="Our Story"
                 title="Where Luxury Meets Artistry"
-                subtitle="At PolishedNailss, we believe beauty is an art form. Our sanctuary offers more than services—we deliver transformative experiences that celebrate you."
+                subtitle="At PolishedNails, we believe beauty is an art form. Our sanctuary offers more than services—we deliver transformative experiences that celebrate you."
                 centered={false}
               />
-              <div className="space-y-4 text-muted-foreground opacity-0 animate-fade-in-up" style={{ animationDelay: "300ms" }}>
+              <div
+                className="space-y-4 text-muted-foreground opacity-0 animate-fade-in-up"
+                style={{ animationDelay: "300ms" }}
+              >
                 <p>
-                  Founded with a passion for perfection, our team of skilled artists combines 
-                  traditional techniques with modern innovation to create stunning results 
-                  that exceed expectations.
+                  Founded with a passion for perfection, our team of skilled
+                  artists combines traditional techniques with modern innovation
+                  to create stunning results that exceed expectations.
                 </p>
                 <p>
-                  We use only premium, cruelty-free products and maintain the highest 
-                  standards of hygiene to ensure your comfort and safety.
+                  We use only premium, cruelty-free products and maintain the
+                  highest standards of hygiene to ensure your comfort and
+                  safety.
                 </p>
               </div>
-              <div className="mt-8 opacity-0 animate-fade-in-up" style={{ animationDelay: "400ms" }}>
+              <div
+                className="mt-8 opacity-0 animate-fade-in-up"
+                style={{ animationDelay: "400ms" }}
+              >
                 <Link to="/about">
                   <Button variant="hero-outline">
                     Discover Our Story
@@ -247,7 +286,10 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12 opacity-0 animate-fade-in" style={{ animationDelay: "600ms" }}>
+          <div
+            className="text-center mt-12 opacity-0 animate-fade-in"
+            style={{ animationDelay: "600ms" }}
+          >
             <Link to="/services">
               <Button variant="hero" size="lg">
                 View All Services
@@ -264,7 +306,7 @@ const Index = () => {
           <SectionHeading
             badge="Client Love"
             title="What Our Guests Say"
-            subtitle="Real experiences from real people who've discovered the PolishedNailss difference."
+            subtitle="Real experiences from real people who've discovered the PolishedNails difference."
           />
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -304,7 +346,7 @@ const Index = () => {
             />
           ))}
         </div>
-        
+
         <div className="container mx-auto px-4 text-center relative z-10">
           <SectionHeading
             badge="Ready to Glow?"
@@ -312,7 +354,10 @@ const Index = () => {
             subtitle="Reserve your spot at our luxury salon and experience the transformation you deserve."
             light
           />
-          <div className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-in-up" style={{ animationDelay: "300ms" }}>
+          <div
+            className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-in-up"
+            style={{ animationDelay: "300ms" }}
+          >
             <Link to="/booking">
               <Button variant="gold" size="xl" className="gold-shimmer">
                 <Sparkles className="w-5 h-5" />

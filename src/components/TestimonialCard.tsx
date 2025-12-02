@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 interface TestimonialCardProps {
   name: string;
-  image: string;
+  image?: string; // Make image optional
   text: string;
   rating: number;
   service: string;
@@ -13,13 +13,16 @@ interface TestimonialCardProps {
 
 export const TestimonialCard = ({
   name,
-  image,
+  image, // image is now optional
   text,
   rating,
   service,
   className,
   style,
 }: TestimonialCardProps) => {
+  // Get the first letter of the name for the avatar
+  const initial = name.charAt(0);
+
   return (
     <div
       className={cn(
@@ -53,14 +56,10 @@ export const TestimonialCard = ({
         "{text}"
       </p>
 
-      {/* Author Info */}
+      {/* Author Info with Initials */}
       <div className="flex items-center gap-4">
-        <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-gold/30">
-          <img
-            src={image}
-            alt={name}
-            className="w-full h-full object-cover"
-          />
+        <div className="w-14 h-14 rounded-full bg-gold/20 flex items-center justify-center text-plum font-serif text-xl font-bold border-2 border-gold/30">
+          {initial}
         </div>
         <div>
           <h4 className="font-serif font-semibold text-plum">{name}</h4>

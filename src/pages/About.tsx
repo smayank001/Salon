@@ -3,29 +3,41 @@ import { Footer } from "@/components/Footer";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Heart, Shield, Sparkles, Award, Users, Gem, ArrowRight } from "lucide-react";
+import {
+  Heart,
+  Shield,
+  Sparkles,
+  Award,
+  Users,
+  Gem,
+  ArrowRight,
+} from "lucide-react";
 import salonInterior from "@/assets/salon-interior.jpg";
 
 const values = [
   {
     icon: <Heart className="w-6 h-6" />,
     title: "Passion for Beauty",
-    description: "Every service is delivered with genuine love for our craft and dedication to making you feel beautiful.",
+    description:
+      "Every service is delivered with genuine love for our craft and dedication to making you feel beautiful.",
   },
   {
     icon: <Shield className="w-6 h-6" />,
     title: "Premium Hygiene",
-    description: "Hospital-grade sterilization and single-use tools ensure your safety is our top priority.",
+    description:
+      "Hospital-grade sterilization and single-use tools ensure your safety is our top priority.",
   },
   {
     icon: <Gem className="w-6 h-6" />,
     title: "Luxury Products",
-    description: "We exclusively use premium, cruelty-free products from the world's finest beauty brands.",
+    description:
+      "We exclusively use premium, cruelty-free products from the world's finest beauty brands.",
   },
   {
     icon: <Award className="w-6 h-6" />,
     title: "Expert Artistry",
-    description: "Our team undergoes continuous training to master the latest techniques and trends.",
+    description:
+      "Our team undergoes continuous training to master the latest techniques and trends.",
   },
 ];
 
@@ -33,25 +45,29 @@ const team = [
   {
     name: "Alexandra Rose",
     role: "Founder & Lead Artist",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=500&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=500&fit=crop",
     specialty: "Nail Art & Design",
   },
   {
     name: "Victoria Chen",
     role: "Senior Lash Artist",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=500&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=500&fit=crop",
     specialty: "Volume Lashes",
   },
   {
     name: "Sophia Williams",
     role: "Skin Specialist",
-    image: "https://images.unsplash.com/photo-1598550874175-4d0ef436c909?w=400&h=500&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1598550874175-4d0ef436c909?w=400&h=500&fit=crop",
     specialty: "Facials & Skincare",
   },
   {
     name: "Emma Davis",
     role: "Beauty Therapist",
-    image: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&h=500&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&h=500&fit=crop",
     specialty: "Waxing & Body Care",
   },
 ];
@@ -69,7 +85,7 @@ const About = () => {
             <SectionHeading
               badge="About Us"
               title="Our Story of Beauty & Excellence"
-              subtitle="For over a decade, PolishedNailss has been Beverly Hills' most trusted destination for luxurious self-care experiences."
+              subtitle="For over a decade, PolishedNails has been Fishers' most trusted destination for luxurious self-care experiences."
             />
           </div>
         </div>
@@ -88,7 +104,9 @@ const About = () => {
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 w-32 h-32 rounded-xl bg-gold/20 backdrop-blur-sm border border-gold/30 flex flex-col items-center justify-center">
-                <span className="font-serif text-4xl font-bold text-plum">10+</span>
+                <span className="font-serif text-4xl font-bold text-plum">
+                  10+
+                </span>
                 <span className="text-sm text-muted-foreground">Years</span>
               </div>
             </div>
@@ -97,21 +115,27 @@ const About = () => {
               <h2 className="font-serif text-3xl md:text-4xl font-semibold text-plum opacity-0 animate-fade-in-up">
                 A Passion Born from Purpose
               </h2>
-              <div className="space-y-4 text-muted-foreground opacity-0 animate-fade-in-up" style={{ animationDelay: "150ms" }}>
+              <div
+                className="space-y-4 text-muted-foreground opacity-0 animate-fade-in-up"
+                style={{ animationDelay: "150ms" }}
+              >
                 <p className="leading-relaxed">
-                  PolishedNailss was founded in 2014 by Alexandra Rose, a visionary beauty artist 
-                  who believed that everyone deserves to feel like royalty. What started as a 
-                  small studio has blossomed into Beverly Hills' premier beauty destination.
+                  PolishedNails was founded in 2014 by Alexandra Rose, a
+                  visionary beauty artist who believed that everyone deserves to
+                  feel like royalty. What started as a small studio has
+                  blossomed into Fishers' premier beauty destination.
                 </p>
                 <p className="leading-relaxed">
-                  Our philosophy is simple: combine world-class artistry with genuine care 
-                  to create transformative experiences. Every detail in our salon—from the 
-                  calming ambiance to the premium products we use—has been thoughtfully 
-                  curated to make your visit extraordinary.
+                  Our philosophy is simple: combine world-class artistry with
+                  genuine care to create transformative experiences. Every
+                  detail in our salon—from the calming ambiance to the premium
+                  products we use—has been thoughtfully curated to make your
+                  visit extraordinary.
                 </p>
                 <p className="leading-relaxed">
-                  Today, our team of skilled artists continues Alexandra's legacy, treating 
-                  each client as family and each service as an opportunity to create something beautiful.
+                  Today, our team of skilled artists continues Alexandra's
+                  legacy, treating each client as family and each service as an
+                  opportunity to create something beautiful.
                 </p>
               </div>
             </div>
@@ -128,7 +152,7 @@ const About = () => {
             title="What We Stand For"
             subtitle="The principles that guide every service we provide and every relationship we build."
           />
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
               <div
@@ -180,8 +204,12 @@ const About = () => {
                     <h3 className="font-serif text-lg font-semibold text-plum">
                       {member.name}
                     </h3>
-                    <p className="text-gold text-sm font-medium">{member.role}</p>
-                    <p className="text-muted-foreground text-xs mt-1">{member.specialty}</p>
+                    <p className="text-gold text-sm font-medium">
+                      {member.role}
+                    </p>
+                    <p className="text-muted-foreground text-xs mt-1">
+                      {member.specialty}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -213,7 +241,11 @@ const About = () => {
               { number: "50K+", label: "Services Done" },
               { number: "5.0", label: "Star Rating" },
             ].map((stat, index) => (
-              <div key={stat.label} className="opacity-0 animate-fade-in-up" style={{ animationDelay: `${index * 100}ms` }}>
+              <div
+                key={stat.label}
+                className="opacity-0 animate-fade-in-up"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
                 <p className="font-serif text-4xl md:text-5xl font-bold text-gold mb-2">
                   {stat.number}
                 </p>
@@ -230,7 +262,7 @@ const About = () => {
           <SectionHeading
             badge="Join Our Family"
             title="Experience the Difference"
-            subtitle="Ready to discover why thousands choose PolishedNailss for their beauty rituals?"
+            subtitle="Ready to discover why thousands choose PolishedNails for their beauty rituals?"
           />
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/booking">

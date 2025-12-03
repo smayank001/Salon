@@ -6,19 +6,15 @@ import { Footer } from "@/components/Footer";
 import { ServiceCard } from "@/components/ServiceCard";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { SectionHeading } from "@/components/SectionHeading";
-import heroImage from "@/assets/hero-nails.jpg";
-import salonInterior from "@/assets/salon-interior.jpg";
-import serviceNails from "@/assets/service-nails.jpg";
-import serviceFacials from "@/assets/service-facials.jpg";
-import serviceLashes from "@/assets/service-lashes.jpg";
-import serviceWaxing from "@/assets/service-waxing.jpg";
+// Hero image is now served statically from public folder
+// Other service images remain as imports for now
 
 const services = [
   {
     title: "Nails",
     description:
       "Signature manicures, gel extensions, and exquisite nail art crafted with precision.",
-    image: serviceNails,
+    image: "/service-nails.jpg",
     icon: <Gem className="w-5 h-5" />,
     href: "/services#nails",
   },
@@ -26,7 +22,7 @@ const services = [
     title: "Facials",
     description:
       "Luxurious hydrating treatments for radiant, glowing skin that speaks volumes.",
-    image: serviceFacials,
+    image: "/service-facials.jpg",
     icon: <Flower2 className="w-5 h-5" />,
     href: "/services#facials",
   },
@@ -34,7 +30,7 @@ const services = [
     title: "Eyelashes",
     description:
       "Volume, hybrid, and classic extensions for captivating, mesmerizing eyes.",
-    image: serviceLashes,
+    image: "/service-lashes.jpg",
     icon: <Star className="w-5 h-5" />,
     href: "/services#lashes",
   },
@@ -42,7 +38,7 @@ const services = [
     title: "Waxing",
     description:
       "Gentle, premium waxing services for silky smooth results every time.",
-    image: serviceWaxing,
+    image: "/service-waxing.jpg",
     icon: <Heart className="w-5 h-5" />,
     href: "/services#waxing",
   },
@@ -79,7 +75,7 @@ const Index = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src={heroImage}
+            src="/hero-nails-optimized.jpg"
             alt="Luxury nail art"
             className="w-full h-full object-cover"
           />
@@ -214,7 +210,7 @@ const Index = () => {
             <div className="relative opacity-0 animate-fade-in-up">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-card">
                 <img
-                  src={salonInterior}
+                  src="/salon-interior-optimized.jpg"
                   alt="Our luxury salon interior"
                   className="w-full h-full object-cover"
                 />

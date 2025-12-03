@@ -3,11 +3,16 @@ import { Footer } from "@/components/Footer";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Sparkles, Check, ArrowRight, Gem, Flower2, Star, Heart } from "lucide-react";
-import serviceNails from "@/assets/service-nails.jpg";
-import serviceFacials from "@/assets/service-facials.jpg";
-import serviceLashes from "@/assets/service-lashes.jpg";
-import serviceWaxing from "@/assets/service-waxing.jpg";
+import {
+  Sparkles,
+  Check,
+  ArrowRight,
+  Gem,
+  Flower2,
+  Star,
+  Heart,
+} from "lucide-react";
+// Images are now served statically from public folder
 
 const nailServices = [
   { name: "Classic Manicure", price: "$35", duration: "30 min" },
@@ -66,7 +71,11 @@ const ServiceSection = ({
 }: ServiceSectionProps) => (
   <section id={id} className="py-16 md:py-24 scroll-mt-24">
     <div className="container mx-auto px-4">
-      <div className={`grid lg:grid-cols-2 gap-12 items-start ${reverse ? "lg:flex-row-reverse" : ""}`}>
+      <div
+        className={`grid lg:grid-cols-2 gap-12 items-start ${
+          reverse ? "lg:flex-row-reverse" : ""
+        }`}
+      >
         {/* Image */}
         <div className={`relative ${reverse ? "lg:order-2" : ""}`}>
           <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-card">
@@ -103,16 +112,27 @@ const ServiceSection = ({
           {/* Services List */}
           <div className="bg-card rounded-2xl border border-border/50 overflow-hidden">
             <div className="p-4 bg-blush border-b border-border/50">
-              <h3 className="font-serif text-lg font-semibold text-plum">Services & Pricing</h3>
+              <h3 className="font-serif text-lg font-semibold text-plum">
+                Services & Pricing
+              </h3>
             </div>
             <div className="divide-y divide-border/50">
               {services.map((service) => (
-                <div key={service.name} className="p-4 flex items-center justify-between hover:bg-blush/50 transition-colors">
+                <div
+                  key={service.name}
+                  className="p-4 flex items-center justify-between hover:bg-blush/50 transition-colors"
+                >
                   <div>
-                    <p className="font-medium text-foreground">{service.name}</p>
-                    <p className="text-sm text-muted-foreground">{service.duration}</p>
+                    <p className="font-medium text-foreground">
+                      {service.name}
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      {service.duration}
+                    </p>
                   </div>
-                  <p className="font-serif text-xl font-semibold text-gold">{service.price}</p>
+                  <p className="font-serif text-xl font-semibold text-gold">
+                    {service.price}
+                  </p>
                 </div>
               ))}
             </div>
@@ -151,10 +171,26 @@ const Services = () => {
           {/* Quick Links */}
           <div className="flex flex-wrap justify-center gap-4 mt-8">
             {[
-              { name: "Nails", href: "#nails", icon: <Gem className="w-4 h-4" /> },
-              { name: "Facials", href: "#facials", icon: <Flower2 className="w-4 h-4" /> },
-              { name: "Lashes", href: "#lashes", icon: <Star className="w-4 h-4" /> },
-              { name: "Waxing", href: "#waxing", icon: <Heart className="w-4 h-4" /> },
+              {
+                name: "Nails",
+                href: "#nails",
+                icon: <Gem className="w-4 h-4" />,
+              },
+              {
+                name: "Facials",
+                href: "#facials",
+                icon: <Flower2 className="w-4 h-4" />,
+              },
+              {
+                name: "Lashes",
+                href: "#lashes",
+                icon: <Star className="w-4 h-4" />,
+              },
+              {
+                name: "Waxing",
+                href: "#waxing",
+                icon: <Heart className="w-4 h-4" />,
+              },
             ].map((item) => (
               <a
                 key={item.name}
@@ -174,7 +210,7 @@ const Services = () => {
         id="nails"
         title="Nail Services"
         description="From classic elegance to bold artistry, our nail services transform your hands and feet into works of art. Our skilled technicians use only premium, long-lasting products for results that turn heads."
-        image={serviceNails}
+        image="/service-nails.jpg"
         icon={<Gem className="w-8 h-8" />}
         services={nailServices}
         features={[
@@ -194,7 +230,7 @@ const Services = () => {
         id="facials"
         title="Facial Treatments"
         description="Rejuvenate your skin with our luxurious facial treatments. Using cutting-edge techniques and premium skincare products, we address your unique skin concerns for a radiant, youthful glow."
-        image={serviceFacials}
+        image="/service-facials.jpg"
         icon={<Flower2 className="w-8 h-8" />}
         services={facialServices}
         features={[
@@ -215,7 +251,7 @@ const Services = () => {
         id="lashes"
         title="Eyelash Services"
         description="Wake up every day with captivating eyes. Our lash artists create natural to dramatic looks using premium, lightweight extensions that protect your natural lashes while delivering stunning results."
-        image={serviceLashes}
+        image="/service-lashes.jpg"
         icon={<Star className="w-8 h-8" />}
         services={lashServices}
         features={[
@@ -235,7 +271,7 @@ const Services = () => {
         id="waxing"
         title="Waxing Services"
         description="Experience smooth, silky skin with our gentle yet effective waxing services. We use premium hard and soft waxes to minimize discomfort while delivering long-lasting results."
-        image={serviceWaxing}
+        image="/service-waxing.jpg"
         icon={<Heart className="w-8 h-8" />}
         services={waxingServices}
         features={[

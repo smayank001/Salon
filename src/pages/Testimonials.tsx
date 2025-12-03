@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Star, Quote, Sparkles, Play } from "lucide-react";
 import { cn } from "@/lib/utils";
-import Salon from "@/assets/Salon.jpg";
+// Unused image import removed
 
 const testimonials = [
   {

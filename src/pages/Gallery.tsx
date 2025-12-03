@@ -6,33 +6,81 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { X, Sparkles, Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import serviceNails from "@/assets/service-nails.jpg";
-import serviceFacials from "@/assets/service-facials.jpg";
-import serviceLashes from "@/assets/service-lashes.jpg";
-import heroNails from "@/assets/hero-nails.jpg";
-import salonInterior from "@/assets/salon-interior.jpg";
-import FrenchTip from "@/assets/FrenchTip.jpg";
-import Nailart from "@/assets/Nailart.jpg";
-import Spa from "@/assets/Spa.jpg";
-import Salon from "@/assets/Salon.jpg";
-import SkinGlow from "@/assets/Skinglow.jpg";
-import SkinCare from "@/assets/Skincare.jpg";
-import EyeLash from "@/assets/EyeLash.jpg";
-
+// Images are now served statically from public folder
 
 const galleryImages = [
-  { src: heroNails, category: "nails", popular: true, alt: "Elegant burgundy and gold nail art" },
-  { src: serviceNails, category: "nails", popular: true, alt: "Pink and gold gel manicure" },
-  { src: serviceLashes, category: "lashes", popular: true, alt: "Volume lash extensions" },
-  { src: serviceFacials, category: "facials", popular: false, alt: "Relaxing facial treatment" },
-  { src: salonInterior, category: "salon", popular: true, alt: "Our luxury salon interior" },
-  { src: FrenchTip, category: "nails", popular: false, alt: "French tip manicure" },
-  { src: Nailart, category: "nails", popular: true, alt: "Nail art collection" },
-  { src: Spa, category: "facials", popular: false, alt: "Spa facial treatment" },
-  { src: Salon, category: "salon", popular: false, alt: "Salon experience" },
-  { src: SkinGlow, category: "facials", popular: false, alt: "Skin glow treatment" },
-  { src: SkinCare, category: "facials", popular: true, alt: "Professional skincare" },
-  { src: EyeLash, category: "lashes", popular: false, alt: "Luxury salon atmosphere" },
+  {
+    src: "/hero-nails-optimized.jpg",
+    category: "nails",
+    popular: true,
+    alt: "Elegant burgundy and gold nail art",
+  },
+  {
+    src: "/service-nails.jpg",
+    category: "nails",
+    popular: true,
+    alt: "Pink and gold gel manicure",
+  },
+  {
+    src: "/service-lashes.jpg",
+    category: "lashes",
+    popular: true,
+    alt: "Volume lash extensions",
+  },
+  {
+    src: "/service-facials.jpg",
+    category: "facials",
+    popular: false,
+    alt: "Relaxing facial treatment",
+  },
+  {
+    src: "/salon-interior-optimized.jpg",
+    category: "salon",
+    popular: true,
+    alt: "Our luxury salon interior",
+  },
+  {
+    src: "/FrenchTip.jpg",
+    category: "nails",
+    popular: false,
+    alt: "French tip manicure",
+  },
+  {
+    src: "/Nailart.jpg",
+    category: "nails",
+    popular: true,
+    alt: "Nail art collection",
+  },
+  {
+    src: "/Spa.jpg",
+    category: "facials",
+    popular: false,
+    alt: "Spa facial treatment",
+  },
+  {
+    src: "/Salon.jpg",
+    category: "salon",
+    popular: false,
+    alt: "Salon experience",
+  },
+  {
+    src: "/Skinglow.jpg",
+    category: "facials",
+    popular: false,
+    alt: "Skin glow treatment",
+  },
+  {
+    src: "/Skincare.jpg",
+    category: "facials",
+    popular: true,
+    alt: "Professional skincare",
+  },
+  {
+    src: "/EyeLash.jpg",
+    category: "lashes",
+    popular: false,
+    alt: "Luxury salon atmosphere",
+  },
 ];
 
 const categories = [
@@ -48,9 +96,10 @@ const Gallery = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const filteredImages = selectedCategory === "all"
-    ? galleryImages
-    : galleryImages.filter((img) => img.category === selectedCategory);
+  const filteredImages =
+    selectedCategory === "all"
+      ? galleryImages
+      : galleryImages.filter((img) => img.category === selectedCategory);
 
   const openLightbox = (index: number) => {
     setCurrentImageIndex(index);
@@ -62,13 +111,13 @@ const Gallery = () => {
   };
 
   const goToPrevious = () => {
-    setCurrentImageIndex((prev) => 
+    setCurrentImageIndex((prev) =>
       prev === 0 ? filteredImages.length - 1 : prev - 1
     );
   };
 
   const goToNext = () => {
-    setCurrentImageIndex((prev) => 
+    setCurrentImageIndex((prev) =>
       prev === filteredImages.length - 1 ? 0 : prev + 1
     );
   };
@@ -128,7 +177,7 @@ const Gallery = () => {
                     loading="lazy"
                   />
                 </div>
-                
+
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-plum/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-center justify-center">
                   <div className="text-center text-champagne p-4">

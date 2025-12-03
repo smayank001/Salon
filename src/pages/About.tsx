@@ -12,7 +12,7 @@ import {
   Gem,
   ArrowRight,
 } from "lucide-react";
-import salonInterior from "@/assets/salon-interior.jpg";
+// salonInterior is now served statically from public folder
 
 const values = [
   {
@@ -98,7 +98,7 @@ const About = () => {
             <div className="relative opacity-0 animate-fade-in-up">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-card">
                 <img
-                  src={salonInterior}
+                  src="/salon-interior-optimized.jpg"
                   alt="Our luxurious salon"
                   className="w-full h-full object-cover"
                 />

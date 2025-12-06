@@ -38,73 +38,37 @@ export const Navbar = () => {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
           isScrolled
-            ? "bg-champagne/95 backdrop-blur-md shadow-soft py-3"
-            : "bg-transparent py-5"
+            ? "bg-champagne/95 backdrop-blur-md shadow-soft py-2"
+            : "bg-transparent py-3"
         )}
       >
         <div className="container mx-auto px-4 flex items-center justify-between">
-          {/* Desktop Navigation - Left */}
-          <div className="hidden lg:flex items-center gap-6">
-            {navLinks.slice(0, 3).map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={cn(
-                  "gold-underline text-sm font-medium tracking-wide transition-colors duration-300",
-                  location.pathname === link.path
-                    ? "text-plum"
-                    : isScrolled
-                    ? "text-charcoal hover:text-plum"
-                    : "text-charcoal/80 hover:text-plum"
-                )}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* Logo - Center */}
-          <Link to="/" className="flex flex-col items-center relative group">
+          <Link to="/" className="flex items-center relative group">
             <div className="absolute inset-0 bg-gold/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <span className="font-serif text-2xl md:text-3xl font-semibold text-plum relative">
-              PolishedNails
-            </span>
-            <span className="text-[10px] tracking-[0.3em] text-gold font-sans uppercase">
-              Luxury Beauty
-            </span>
+            <img
+              src="/logopn-removebg.jpg"
+              alt="Polished Nails Logo"
+              className="h-20 w-auto object-contain relative"
+            />
           </Link>
 
-          {/* Desktop Navigation - Right */}
-          <div className="hidden lg:flex items-center gap-6">
-            {navLinks.slice(3, 6).map((link) => (
+          <div className="hidden lg:flex items-center gap-8 ml-8">
+            {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 className={cn(
                   "gold-underline text-sm font-medium tracking-wide transition-colors duration-300",
                   location.pathname === link.path
-                    ? "text-plum"
+                    ? "text-charcoal"
                     : isScrolled
-                    ? "text-charcoal hover:text-plum"
-                    : "text-charcoal/80 hover:text-plum"
+                    ? "text-charcoal hover:text-gold"
+                    : "text-charcoal/80 hover:text-gold"
                 )}
               >
                 {link.name}
               </Link>
             ))}
-            <Link
-              to="/contact"
-              className={cn(
-                "gold-underline text-sm font-medium tracking-wide transition-colors duration-300",
-                location.pathname === "/contact"
-                  ? "text-plum"
-                  : isScrolled
-                  ? "text-charcoal hover:text-plum"
-                  : "text-charcoal/80 hover:text-plum"
-              )}
-            >
-              Contact
-            </Link>
             <Link to="/booking">
               <Button variant="hero" size="sm" className="ml-2">
                 <Sparkles className="w-4 h-4" />
@@ -116,7 +80,7 @@ export const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-plum hover:text-gold transition-colors"
+            className="lg:hidden p-2 text-charcoal hover:text-gold transition-colors"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -153,8 +117,8 @@ export const Navbar = () => {
                     "py-4 text-lg font-medium tracking-wide border-b border-gold/20 transition-all duration-300",
                     "animate-slide-in-right",
                     location.pathname === link.path
-                      ? "text-gold"
-                      : "text-champagne hover:text-gold hover:pl-2"
+                      ? "text-charcoal"
+                      : "text-champagne hover:text-charcoal hover:pl-2"
                   )}
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >

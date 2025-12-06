@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { ServiceCard } from "@/components/ServiceCard";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { SectionHeading } from "@/components/SectionHeading";
+import { ImageSlider } from "@/components/ImageSlider";
 // Hero image is now served statically from public folder
 // Other service images remain as imports for now
 
@@ -16,7 +17,7 @@ const services = [
       "Signature manicures, gel extensions, and exquisite nail art crafted with precision.",
     image: "/service-nails.jpg",
     icon: <Gem className="w-5 h-5" />,
-    href: "/services#nails",
+    href: "/services/nails",
   },
   {
     title: "Facials",
@@ -24,7 +25,7 @@ const services = [
       "Luxurious hydrating treatments for radiant, glowing skin that speaks volumes.",
     image: "/service-facials.jpg",
     icon: <Flower2 className="w-5 h-5" />,
-    href: "/services#facials",
+    href: "/services/facials",
   },
   {
     title: "Eyelashes",
@@ -32,7 +33,7 @@ const services = [
       "Volume, hybrid, and classic extensions for captivating, mesmerizing eyes.",
     image: "/service-lashes.jpg",
     icon: <Star className="w-5 h-5" />,
-    href: "/services#lashes",
+    href: "/services/lashes",
   },
   {
     title: "Waxing",
@@ -40,7 +41,7 @@ const services = [
       "Gentle, premium waxing services for silky smooth results every time.",
     image: "/service-waxing.jpg",
     icon: <Heart className="w-5 h-5" />,
-    href: "/services#waxing",
+    href: "/services/waxing",
   },
 ];
 
@@ -72,12 +73,15 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
+        {/* Background Slider */}
         <div className="absolute inset-0">
-          <img
-            src="/hero-nails-optimized.jpg"
-            alt="Luxury nail art"
-            className="w-full h-full object-cover"
+          <ImageSlider
+            images={[
+              "/uns.jpg",
+              "/hero-nails.jpg",
+              "/hydra.jpg",
+              "/longlongnails.jpg",
+            ]}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-charcoal/70 via-charcoal/40 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal/50 via-transparent to-transparent" />
@@ -164,26 +168,30 @@ const Index = () => {
                 icon: <Gem className="w-8 h-8" />,
                 name: "Nails",
                 desc: "Art & Care",
+                href: "/services/nails",
               },
               {
                 icon: <Flower2 className="w-8 h-8" />,
                 name: "Facials",
                 desc: "Glow & Hydrate",
+                href: "/services/facials",
               },
               {
                 icon: <Star className="w-8 h-8" />,
                 name: "Lashes",
                 desc: "Volume & Length",
+                href: "/services/lashes",
               },
               {
                 icon: <Heart className="w-8 h-8" />,
                 name: "Waxing",
                 desc: "Smooth & Gentle",
+                href: "/services/waxing",
               },
             ].map((item, index) => (
               <Link
                 key={item.name}
-                to="/services"
+                to={item.href}
                 className="group flex flex-col items-center text-center p-6 rounded-2xl bg-champagne/50 hover:bg-champagne transition-all duration-300 hover:-translate-y-2 opacity-0 animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >

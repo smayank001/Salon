@@ -21,9 +21,24 @@ import {
   ChevronRight,
 } from "lucide-react";
 
-type ServiceCategory = "nails" | "facials" | "lashes" | "waxing";
+type ServiceCategory =
+  | "nails"
+  | "facials"
+  | "lashes"
+  | "waxing"
+  | "manicures-pedicures";
 
-const serviceOptions = {
+// Add this interface to define the service structure
+interface Service {
+  id: string;
+  name: string;
+  price: number;
+  duration: string;
+  womenOnly?: boolean;
+}
+
+// Update the serviceOptions type to include new services
+const serviceOptions: Record<ServiceCategory, Service[]> = {
   nails: [
     {
       id: "classic-mani",
@@ -45,51 +60,240 @@ const serviceOptions = {
       duration: "60 min",
     },
     { id: "gel-ext", name: "Gel Extensions", price: 95, duration: "90 min" },
-  ],
-  facials: [
+    // Repair Nails services
+    { id: "repair-1-finger", name: "1 Finger", price: 2, duration: "15 min" },
+    { id: "repair-2-fingers", name: "2 Fingers", price: 5, duration: "20 min" },
+    { id: "repair-3-fingers", name: "3 Fingers", price: 7, duration: "25 min" },
     {
-      id: "express-glow",
-      name: "Express Glow Facial",
-      price: 85,
+      id: "repair-4-fingers",
+      name: "4 Fingers",
+      price: 10,
       duration: "30 min",
     },
     {
-      id: "hydrating",
-      name: "Hydrating Facial",
-      price: 120,
+      id: "repair-5-fingers-design",
+      name: "5 Fingers Design",
+      price: 13,
+      duration: "45 min",
+    },
+    {
+      id: "repair-6-fingers-design",
+      name: "6 Fingers Design",
+      price: 16,
+      duration: "50 min",
+    },
+    {
+      id: "repair-7-fingers-design",
+      name: "7 Fingers Design",
+      price: 17,
+      duration: "55 min",
+    },
+    {
+      id: "repair-8-fingers-design",
+      name: "8 Fingers Design",
+      price: 20,
       duration: "60 min",
     },
     {
-      id: "anti-aging",
-      name: "Anti-Aging Treatment",
-      price: 150,
+      id: "repair-9-fingers",
+      name: "9 Fingers",
+      price: 23,
+      duration: "65 min",
+    },
+    {
+      id: "repair-10-fingers-design",
+      name: "10 Fingers Design",
+      price: 25,
+      duration: "75 min",
+    },
+    // Kids Menu services
+    {
+      id: "princess-mani",
+      name: "Princess Mani",
+      price: 15,
+      duration: "30 min",
+    },
+    {
+      id: "princess-pedi",
+      name: "Princess Pedi",
+      price: 25,
+      duration: "45 min",
+    },
+    {
+      id: "princess-combo",
+      name: "Princess Combo",
+      price: 35,
       duration: "75 min",
     },
     {
-      id: "royal-facial",
-      name: "Royal Signature Facial",
+      id: "kid-polish-change-hand",
+      name: "Kid Polish Change Hand",
+      price: 7,
+      duration: "15 min",
+    },
+    {
+      id: "kid-polish-change-toes",
+      name: "Kid Polish Change Toes",
+      price: 7,
+      duration: "15 min",
+    },
+    { id: "add-gel-kids", name: "Add Gel", price: 10, duration: "10 min" },
+  ],
+  facials: [
+    {
+      id: "express-facial",
+      name: "Express Facial",
+      price: 40,
+      duration: "20 min",
+    },
+    {
+      id: "herbal-facial",
+      name: "Herbal Facial",
+      price: 50,
+      duration: "25 min",
+    },
+    {
+      id: "gold-facial",
+      name: "Gold Facial",
+      price: 60,
+      duration: "40 min",
+    },
+    {
+      id: "deep-cleaning-facial",
+      name: "Deep Cleaning Facial",
+      price: 95,
+      duration: "45 min",
+    },
+    {
+      id: "seaweed-facial",
+      name: "Seaweed Facial",
+      price: 100,
+      duration: "45 min",
+    },
+    {
+      id: "acne-facial",
+      name: "Acne Facial",
+      price: 95,
+      duration: "45 min",
+    },
+    {
+      id: "body-scrub",
+      name: "Body Scrub (Only Women)",
       price: 200,
-      duration: "90 min",
+      duration: "2 hours",
+      womenOnly: true,
+    },
+    {
+      id: "micro-dermabrasion",
+      name: "Micro Dermabrasion",
+      price: 150,
+      duration: "1 hour",
+    },
+    {
+      id: "micro-needling",
+      name: "Micro Needling",
+      price: 150,
+      duration: "1 hour",
+    },
+    {
+      id: "hydra-facial-basic",
+      name: "Hydra-Facial (Basic)",
+      price: 200,
+      duration: "1 hour 25 min",
+    },
+    {
+      id: "hydra-facial-serum",
+      name: "Hydra-Facial (Serum)",
+      price: 275,
+      duration: "1 hour 25 min",
+    },
+    {
+      id: "hydra-facial-cupping",
+      name: "Hydra-Facial (Cupping)",
+      price: 350,
+      duration: "1 hour 25 min",
+    },
+    {
+      id: "derma-planing",
+      name: "Derma-Planing",
+      price: 75,
+      duration: "45 min",
     },
   ],
   lashes: [
+    // Updated Eyelash New Set prices (reduced by $20)
     {
-      id: "classic-full",
-      name: "Classic Full Set",
+      id: "classic-set",
+      name: "Classic set",
+      price: 90,
+      duration: "90 min",
+    },
+    {
+      id: "yy-mink",
+      name: "YY mink",
+      price: 95,
+      duration: "90 min",
+    },
+    {
+      id: "2-tips-mascara-look",
+      name: "2 tips mascara look",
+      price: 100,
+      duration: "90 min",
+    },
+    {
+      id: "natural-volume",
+      name: "Natural volume",
+      price: 110,
+      duration: "90 min",
+    },
+    {
+      id: "wispy-natural-volume",
+      name: "Wispy natural volume",
+      price: 120,
+      duration: "90 min",
+    },
+    {
+      id: "full-volume",
+      name: "Full volume",
+      price: 125,
+      duration: "90 min",
+    },
+    {
+      id: "wispy-full-volume",
+      name: "Wispy full volume",
+      price: 140,
+      duration: "90 min",
+    },
+    {
+      id: "maga-volume",
+      name: "Maga volume",
+      price: 200,
+      duration: "90 min",
+    },
+    {
+      id: "wispy-mega-volume",
+      name: "Wispy mega volume",
       price: 150,
       duration: "90 min",
     },
     {
-      id: "hybrid-full",
-      name: "Hybrid Full Set",
-      price: 180,
-      duration: "120 min",
+      id: "fairy-set",
+      name: "Fairy set",
+      price: 120,
+      duration: "90 min",
     },
     {
-      id: "volume-full",
-      name: "Volume Full Set",
-      price: 220,
-      duration: "150 min",
+      id: "designed-set",
+      name: "Designed set",
+      price: 120,
+      duration: "90 min",
+    },
+    // Other lash services (unchanged)
+    {
+      id: "lash-fills",
+      name: "Lash Fills (2 weeks)",
+      price: 65,
+      duration: "45 min",
     },
     {
       id: "lash-lift",
@@ -99,11 +303,24 @@ const serviceOptions = {
     },
   ],
   waxing: [
-    { id: "brow", name: "Eyebrow Shaping", price: 25, duration: "15 min" },
-    { id: "lip-chin", name: "Lip & Chin", price: 20, duration: "15 min" },
-    { id: "full-face", name: "Full Face", price: 55, duration: "30 min" },
-    { id: "brazilian", name: "Brazilian", price: 65, duration: "30 min" },
+    { id: "eyebrows", name: "Eyebrows", price: 17, duration: "" },
+    { id: "full-legs", name: "Full Legs", price: 62, duration: "" },
+    { id: "chin", name: "Chin", price: 14, duration: "" },
+    { id: "sideburns", name: "Sideburns", price: 12, duration: "" },
+    { id: "whole-face", name: "Whole Face", price: 62, duration: "" },
+    {
+      id: "half-legs",
+      name: "Half Legs (Upper or Lower)",
+      price: 52,
+      duration: "",
+    },
+    { id: "upper-lips", name: "Upper Lips", price: 12, duration: "" },
+    { id: "under-arms", name: "Under Arms", price: 27, duration: "" },
+    { id: "full-arms", name: "Full Arms", price: 52, duration: "" },
+    { id: "half-arms", name: "Half Arms", price: 37, duration: "" },
+    { id: "bikini", name: "Bikini", price: 35, duration: "", womenOnly: true },
   ],
+  "manicures-pedicures": [], // Empty for now as per requirements
 };
 
 const timeSlots = ["9:30 AM - 7:30 PM"];
@@ -143,6 +360,11 @@ const Booking = () => {
       name: "Waxing",
       icon: <Heart className="w-6 h-6" />,
     },
+    {
+      id: "manicures-pedicures" as ServiceCategory,
+      name: "Manicures & Pedicures",
+      icon: <Sparkles className="w-6 h-6" />,
+    },
   ];
 
   const toggleService = (serviceId: string) => {
@@ -155,12 +377,31 @@ const Booking = () => {
 
   const calculateTotal = () => {
     if (!selectedCategory) return 0;
-    return selectedServices.reduce((total, serviceId) => {
+
+    // Calculate base total
+    let total = selectedServices.reduce((sum, serviceId) => {
       const service = serviceOptions[selectedCategory].find(
         (s) => s.id === serviceId
       );
-      return total + (service?.price || 0);
+      return sum + (service?.price || 0);
     }, 0);
+
+    // Apply Derma-Planing + Hydra-Facial discount rule
+    const hasDermaPlaning = selectedServices.includes("derma-planing");
+    const hasHydraFacial = selectedServices.some((id) =>
+      id.startsWith("hydra-facial")
+    );
+
+    if (hasDermaPlaning && hasHydraFacial) {
+      // Apply 50% discount on Derma-Planing
+      const dermaPlaningService = serviceOptions.facials.find(
+        (s) => s.id === "derma-planing"
+      );
+      const discount = (dermaPlaningService?.price || 0) * 0.5;
+      total -= discount;
+    }
+
+    return total;
   };
 
   const canProceed = () => {
@@ -243,7 +484,7 @@ const Booking = () => {
                   </p>
 
                   {/* Categories */}
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                  <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
                     {categories.map((cat) => (
                       <button
                         key={cat.id}
@@ -275,52 +516,74 @@ const Booking = () => {
                     ))}
                   </div>
 
-                  {/* Services */}
-                  {selectedCategory && (
-                    <div className="space-y-3">
-                      <h4 className="font-medium text-foreground mb-4">
-                        Select Services:
+                  {/* Special message for Manicures & Pedicures */}
+                  {selectedCategory === "manicures-pedicures" && (
+                    <div className="text-center py-12">
+                      <div className="w-16 h-16 rounded-full bg-blush flex items-center justify-center mx-auto mb-4">
+                        <Sparkles className="w-8 h-8 text-gold" />
+                      </div>
+                      <h4 className="font-serif text-2xl font-semibold text-plum mb-2">
+                        Manicures & Pedicures
                       </h4>
-                      {serviceOptions[selectedCategory].map((service) => (
-                        <button
-                          key={service.id}
-                          onClick={() => toggleService(service.id)}
-                          className={cn(
-                            "w-full p-4 rounded-xl border-2 transition-all duration-300 flex items-center justify-between",
-                            selectedServices.includes(service.id)
-                              ? "border-gold bg-blush"
-                              : "border-border hover:border-gold/50"
-                          )}
-                        >
-                          <div className="flex items-center gap-3">
-                            <div
-                              className={cn(
-                                "w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors",
-                                selectedServices.includes(service.id)
-                                  ? "border-gold bg-gold text-charcoal"
-                                  : "border-border"
-                              )}
-                            >
-                              {selectedServices.includes(service.id) && (
-                                <Check className="w-4 h-4" />
-                              )}
-                            </div>
-                            <div className="text-left">
-                              <p className="font-medium text-foreground">
-                                {service.name}
-                              </p>
-                              <p className="text-sm text-muted-foreground">
-                                {service.duration}
-                              </p>
-                            </div>
-                          </div>
-                          <span className="font-serif text-xl font-semibold text-gold">
-                            ${service.price}
-                          </span>
-                        </button>
-                      ))}
+                      <p className="text-muted-foreground">
+                        Coming soon to our booking system. Please check back
+                        later.
+                      </p>
                     </div>
                   )}
+
+                  {/* Services */}
+                  {selectedCategory &&
+                    selectedCategory !== "manicures-pedicures" && (
+                      <div className="space-y-3">
+                        <h4 className="font-medium text-foreground mb-4">
+                          Select Services:
+                        </h4>
+                        {serviceOptions[selectedCategory].map((service) => (
+                          <button
+                            key={service.id}
+                            onClick={() => toggleService(service.id)}
+                            className={cn(
+                              "w-full p-4 rounded-xl border-2 transition-all duration-300 flex items-center justify-between",
+                              selectedServices.includes(service.id)
+                                ? "border-gold bg-blush"
+                                : "border-border hover:border-gold/50"
+                            )}
+                          >
+                            <div className="flex items-center gap-3">
+                              <div
+                                className={cn(
+                                  "w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors",
+                                  selectedServices.includes(service.id)
+                                    ? "border-gold bg-gold text-charcoal"
+                                    : "border-border"
+                                )}
+                              >
+                                {selectedServices.includes(service.id) && (
+                                  <Check className="w-4 h-4" />
+                                )}
+                              </div>
+                              <div className="text-left">
+                                <p className="font-medium text-foreground">
+                                  {service.name}
+                                  {service.womenOnly && (
+                                    <span className="ml-2 text-xs bg-plum/10 text-plum px-2 py-1 rounded">
+                                      Women Only
+                                    </span>
+                                  )}
+                                </p>
+                                <p className="text-sm text-muted-foreground">
+                                  {service.duration}
+                                </p>
+                              </div>
+                            </div>
+                            <span className="font-serif text-xl font-semibold text-gold">
+                              ${service.price}
+                            </span>
+                          </button>
+                        ))}
+                      </div>
+                    )}
                 </div>
               )}
 
@@ -498,6 +761,16 @@ const Booking = () => {
                         ${calculateTotal()}
                       </span>
                     </div>
+                    {/* Show discount message if applicable */}
+                    {selectedServices.includes("derma-planing") &&
+                      selectedServices.some((id) =>
+                        id.startsWith("hydra-facial")
+                      ) && (
+                        <div className="text-sm text-muted-foreground italic">
+                          50% discount applied on Derma-Planing when booked with
+                          Hydra-Facial
+                        </div>
+                      )}
                   </div>
                 </div>
               )}

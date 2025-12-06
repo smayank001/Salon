@@ -39,10 +39,10 @@ export const ServiceCard = ({
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent" />
-          
+
           {/* Gold Shimmer Overlay on Hover */}
           <div className="absolute inset-0 bg-gold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-          
+
           {/* Icon */}
           <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-champagne/90 backdrop-blur-sm flex items-center justify-center text-plum shadow-soft group-hover:bg-gold group-hover:text-charcoal transition-all duration-300">
             {icon}
@@ -58,7 +58,7 @@ export const ServiceCard = ({
             {description}
           </p>
           <div className="flex items-center gap-2 text-gold font-medium text-sm">
-            <span>Book This Service</span>
+            <span>See Services</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
           </div>
         </div>

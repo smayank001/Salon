@@ -14,143 +14,6 @@ import {
 } from "lucide-react";
 // Images are now served statically from public folder
 
-const nailServices = [
-  { name: "Classic Manicure", price: "$35", duration: "30 min" },
-  { name: "Signature Manicure", price: "$55", duration: "45 min" },
-  { name: "Gel Manicure", price: "$65", duration: "50 min" },
-  { name: "Luxury Pedicure", price: "$75", duration: "60 min" },
-  { name: "Gel Extensions", price: "$95", duration: "90 min" },
-  { name: "Nail Art (per nail)", price: "$10+", duration: "varies" },
-];
-
-const facialServices = [
-  { name: "Express Glow Facial", price: "$85", duration: "30 min" },
-  { name: "Hydrating Facial", price: "$120", duration: "60 min" },
-  { name: "Anti-Aging Treatment", price: "$150", duration: "75 min" },
-  { name: "Deep Cleanse Facial", price: "$110", duration: "60 min" },
-  { name: "Royal Signature Facial", price: "$200", duration: "90 min" },
-];
-
-const lashServices = [
-  { name: "Classic Full Set", price: "$150", duration: "90 min" },
-  { name: "Hybrid Full Set", price: "$180", duration: "120 min" },
-  { name: "Volume Full Set", price: "$220", duration: "150 min" },
-  { name: "Lash Fills (2 weeks)", price: "$65", duration: "45 min" },
-  { name: "Lash Lift & Tint", price: "$85", duration: "60 min" },
-];
-
-const waxingServices = [
-  { name: "Eyebrow Shaping", price: "$25", duration: "15 min" },
-  { name: "Lip & Chin", price: "$20", duration: "15 min" },
-  { name: "Full Face", price: "$55", duration: "30 min" },
-  { name: "Underarms", price: "$30", duration: "15 min" },
-  { name: "Full Legs", price: "$75", duration: "45 min" },
-  { name: "Brazilian", price: "$65", duration: "30 min" },
-];
-
-interface ServiceSectionProps {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-  icon: React.ReactNode;
-  services: { name: string; price: string; duration: string }[];
-  features: string[];
-  reverse?: boolean;
-}
-
-const ServiceSection = ({
-  id,
-  title,
-  description,
-  image,
-  icon,
-  services,
-  features,
-  reverse = false,
-}: ServiceSectionProps) => (
-  <section id={id} className="py-16 md:py-24 scroll-mt-24">
-    <div className="container mx-auto px-4">
-      <div
-        className={`grid lg:grid-cols-2 gap-12 items-start ${
-          reverse ? "lg:flex-row-reverse" : ""
-        }`}
-      >
-        {/* Image */}
-        <div className={`relative ${reverse ? "lg:order-2" : ""}`}>
-          <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-card">
-            <img
-              src={image}
-              alt={title}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="absolute -bottom-4 -right-4 w-20 h-20 rounded-full bg-gold flex items-center justify-center text-charcoal shadow-gold">
-            {icon}
-          </div>
-        </div>
-
-        {/* Content */}
-        <div className={reverse ? "lg:order-1" : ""}>
-          <h2 className="font-serif text-3xl md:text-4xl font-semibold text-plum mb-4">
-            {title}
-          </h2>
-          <p className="text-muted-foreground leading-relaxed mb-8">
-            {description}
-          </p>
-
-          {/* Features */}
-          <div className="grid grid-cols-2 gap-3 mb-8">
-            {features.map((feature) => (
-              <div key={feature} className="flex items-center gap-2 text-sm">
-                <Check className="w-4 h-4 text-gold flex-shrink-0" />
-                <span className="text-foreground">{feature}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* Services List */}
-          <div className="bg-card rounded-2xl border border-border/50 overflow-hidden">
-            <div className="p-4 bg-blush border-b border-border/50">
-              <h3 className="font-serif text-lg font-semibold text-plum">
-                Services & Pricing
-              </h3>
-            </div>
-            <div className="divide-y divide-border/50">
-              {services.map((service) => (
-                <div
-                  key={service.name}
-                  className="p-4 flex items-center justify-between hover:bg-blush/50 transition-colors"
-                >
-                  <div>
-                    <p className="font-medium text-foreground">
-                      {service.name}
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      {service.duration}
-                    </p>
-                  </div>
-                  <p className="font-serif text-xl font-semibold text-gold">
-                    {service.price}
-                  </p>
-                </div>
-              ))}
-            </div>
-            <div className="p-4 bg-blush/50">
-              <Link to="/booking">
-                <Button variant="hero" className="w-full">
-                  <Sparkles className="w-4 h-4" />
-                  Book This Service
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-);
-
 const Services = () => {
   return (
     <main className="min-h-screen bg-background">
@@ -167,123 +30,170 @@ const Services = () => {
               subtitle="Discover our comprehensive range of premium services designed to pamper, rejuvenate, and transform."
             />
           </div>
-
-          {/* Quick Links */}
-          <div className="flex flex-wrap justify-center gap-4 mt-8">
-            {[
-              {
-                name: "Nails",
-                href: "#nails",
-                icon: <Gem className="w-4 h-4" />,
-              },
-              {
-                name: "Facials",
-                href: "#facials",
-                icon: <Flower2 className="w-4 h-4" />,
-              },
-              {
-                name: "Lashes",
-                href: "#lashes",
-                icon: <Star className="w-4 h-4" />,
-              },
-              {
-                name: "Waxing",
-                href: "#waxing",
-                icon: <Heart className="w-4 h-4" />,
-              },
-            ].map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="flex items-center gap-2 px-6 py-3 bg-champagne rounded-full text-plum font-medium hover:bg-plum hover:text-champagne transition-all duration-300 shadow-soft"
-              >
-                {item.icon}
-                {item.name}
-              </a>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* Nails */}
-      <ServiceSection
-        id="nails"
-        title="Nail Services"
-        description="From classic elegance to bold artistry, our nail services transform your hands and feet into works of art. Our skilled technicians use only premium, long-lasting products for results that turn heads."
-        image="/service-nails.jpg"
-        icon={<Gem className="w-8 h-8" />}
-        services={nailServices}
-        features={[
-          "Premium gel polish",
-          "Nail art specialists",
-          "Long-lasting results",
-          "Hygienic practices",
-          "Custom designs",
-          "Relaxing experience",
-        ]}
-      />
+      {/* Category Cards Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold text-plum mb-4">
+              Our Service Categories
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Explore our wide range of beauty services, each designed to
+              enhance your natural beauty.
+            </p>
+          </div>
 
-      <div className="border-t border-border/30" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Nails Card */}
+            <div className="premium-card gold-border rounded-2xl overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src="/service-nails.jpg"
+                  alt="Nails"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent" />
+                <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-champagne/90 backdrop-blur-sm flex items-center justify-center text-plum">
+                  <Gem className="w-6 h-6" />
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="font-serif text-2xl font-semibold text-plum mb-2">
+                  Nails
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  Signature manicures, gel extensions, and exquisite nail art.
+                </p>
+                <Link to="/services/nails">
+                  <Button variant="outline" className="w-full">
+                    See more
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
 
-      {/* Facials */}
-      <ServiceSection
-        id="facials"
-        title="Facial Treatments"
-        description="Rejuvenate your skin with our luxurious facial treatments. Using cutting-edge techniques and premium skincare products, we address your unique skin concerns for a radiant, youthful glow."
-        image="/service-facials.jpg"
-        icon={<Flower2 className="w-8 h-8" />}
-        services={facialServices}
-        features={[
-          "Customized treatments",
-          "Premium products",
-          "Deep hydration",
-          "Anti-aging focus",
-          "Relaxing atmosphere",
-          "Expert estheticians",
-        ]}
-        reverse
-      />
+            {/* Facials Card */}
+            <div className="premium-card gold-border rounded-2xl overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src="/service-facials.jpg"
+                  alt="Facials"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent" />
+                <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-champagne/90 backdrop-blur-sm flex items-center justify-center text-plum">
+                  <Flower2 className="w-6 h-6" />
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="font-serif text-2xl font-semibold text-plum mb-2">
+                  Facials
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  Luxurious hydrating treatments for radiant, glowing skin.
+                </p>
+                <Link to="/services/facials">
+                  <Button variant="outline" className="w-full">
+                    See more
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
 
-      <div className="border-t border-border/30" />
+            {/* Lashes Card */}
+            <div className="premium-card gold-border rounded-2xl overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src="/service-lashes.jpg"
+                  alt="Lashes"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent" />
+                <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-champagne/90 backdrop-blur-sm flex items-center justify-center text-plum">
+                  <Star className="w-6 h-6" />
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="font-serif text-2xl font-semibold text-plum mb-2">
+                  Lashes
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  Volume, hybrid, and classic extensions for captivating eyes.
+                </p>
+                <Link to="/services/lashes">
+                  <Button variant="outline" className="w-full">
+                    See more
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
 
-      {/* Lashes */}
-      <ServiceSection
-        id="lashes"
-        title="Eyelash Services"
-        description="Wake up every day with captivating eyes. Our lash artists create natural to dramatic looks using premium, lightweight extensions that protect your natural lashes while delivering stunning results."
-        image="/service-lashes.jpg"
-        icon={<Star className="w-8 h-8" />}
-        services={lashServices}
-        features={[
-          "Premium silk lashes",
-          "Certified artists",
-          "Natural-looking",
-          "Lightweight comfort",
-          "Long retention",
-          "Customized styles",
-        ]}
-      />
+            {/* Waxing Card */}
+            <div className="premium-card gold-border rounded-2xl overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src="/service-waxing.jpg"
+                  alt="Waxing"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent" />
+                <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-champagne/90 backdrop-blur-sm flex items-center justify-center text-plum">
+                  <Heart className="w-6 h-6" />
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="font-serif text-2xl font-semibold text-plum mb-2">
+                  Waxing
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  Gentle, premium waxing services for silky smooth results.
+                </p>
+                <Link to="/services/waxing">
+                  <Button variant="outline" className="w-full">
+                    See more
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
 
-      <div className="border-t border-border/30" />
-
-      {/* Waxing */}
-      <ServiceSection
-        id="waxing"
-        title="Waxing Services"
-        description="Experience smooth, silky skin with our gentle yet effective waxing services. We use premium hard and soft waxes to minimize discomfort while delivering long-lasting results."
-        image="/service-waxing.jpg"
-        icon={<Heart className="w-8 h-8" />}
-        services={waxingServices}
-        features={[
-          "Premium wax",
-          "Gentle technique",
-          "Hygienic tools",
-          "Soothing aftercare",
-          "Long-lasting",
-          "Expert therapists",
-        ]}
-        reverse
-      />
+            {/* Manicures & Pedicures Card */}
+            <div className="premium-card gold-border rounded-2xl overflow-hidden md:col-span-2 lg:col-span-1 lg:col-start-2">
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src="/manipedi.jpg"
+                  alt="Manicures & Pedicures"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent" />
+                <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-champagne/90 backdrop-blur-sm flex items-center justify-center text-plum">
+                  <Sparkles className="w-6 h-6" />
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="font-serif text-2xl font-semibold text-plum mb-2">
+                  Manicures & Pedicures
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  Specialized care for your hands and feet.
+                </p>
+                <Link to="/services/manicures-pedicures">
+                  <Button variant="outline" className="w-full">
+                    See more
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-plum text-champagne relative overflow-hidden">

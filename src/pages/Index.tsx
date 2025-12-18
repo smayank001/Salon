@@ -81,6 +81,9 @@ const Index = () => {
               "/hero-nails.jpg",
               "/hydra.jpg",
               "/longlongnails.jpg",
+              "/service-lashes.jpg",
+              "/dermatologist-performing-laser-hair-removal-patient.jpg",
+              "/waxing.jpg",
             ]}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-charcoal/70 via-charcoal/40 to-transparent" />

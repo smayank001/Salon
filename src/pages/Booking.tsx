@@ -60,6 +60,12 @@ const serviceOptions: Record<ServiceCategory, Service[]> = {
       duration: "60 min",
     },
     { id: "gel-ext", name: "Gel Extensions", price: 95, duration: "90 min" },
+    {
+      id: "nail-art",
+      name: "Nail Art (per nail)",
+      price: 10,
+      duration: "varies",
+    },
     // Repair Nails services
     { id: "repair-1-finger", name: "1 Finger", price: 2, duration: "15 min" },
     { id: "repair-2-fingers", name: "2 Fingers", price: 5, duration: "20 min" },
@@ -138,6 +144,164 @@ const serviceOptions: Record<ServiceCategory, Service[]> = {
       duration: "15 min",
     },
     { id: "add-gel-kids", name: "Add Gel", price: 10, duration: "10 min" },
+
+    // Additional Manicure Services
+    {
+      id: "basic-mani-new",
+      name: "Basic Manicure",
+      price: 20,
+      duration: "30 min",
+    },
+    {
+      id: "color-gel-mani-new",
+      name: "Color Gel Manicure",
+      price: 45,
+      duration: "45 min",
+    },
+    {
+      id: "powder-gel-mani-new",
+      name: "Powder Gel Manicure",
+      price: 55,
+      duration: "50 min",
+    },
+    {
+      id: "powder-gel-ext-new",
+      name: "Powder Gel with Extensions",
+      price: 75,
+      duration: "75 min",
+    },
+    {
+      id: "polish-change-new",
+      name: "Polish Change",
+      price: 10,
+      duration: "15 min",
+    },
+    { id: "soak-off-new", name: "Soak Off", price: 20, duration: "20 min" },
+    {
+      id: "enhancement-removal-new",
+      name: "Enhancement Removal",
+      price: 30,
+      duration: "30 min",
+    },
+    {
+      id: "acrylic-ext-new",
+      name: "Acrylic Extensions",
+      price: 90,
+      duration: "90 min",
+    },
+    {
+      id: "acrylic-maint-new",
+      name: "Acrylic Maintenance",
+      price: 50,
+      duration: "60 min",
+    },
+    {
+      id: "hard-gel-ext-new",
+      name: "Hard Gel Extensions",
+      price: 120,
+      duration: "90 min",
+    },
+    {
+      id: "hard-gel-maint-new",
+      name: "Hard Gel Maintenance",
+      price: 65,
+      duration: "75 min",
+    },
+
+    // Additional Pedicure Services
+    {
+      id: "basic-pedi-new",
+      name: "Basic Pedicure",
+      price: 35,
+      duration: "45 min",
+    },
+    {
+      id: "pedi-polish-change-new",
+      name: "Pedicure Polish Change",
+      price: 15,
+      duration: "20 min",
+    },
+    {
+      id: "add-gel-pedi-new",
+      name: "Add Gel Polish (Pedicure)",
+      price: 20,
+      duration: "",
+    },
+    {
+      id: "remove-gel-pedi-new",
+      name: "Remove Gel Polish (Pedicure)",
+      price: 10,
+      duration: "",
+    },
+    {
+      id: "callus-removal-pedi-new",
+      name: "Callus Removal (Pedicure)",
+      price: 10,
+      duration: "",
+    },
+    {
+      id: "hot-stone-pedi-new",
+      name: "Extra Massage with Hot Stone (Pedicure)",
+      price: 15,
+      duration: "",
+    },
+    {
+      id: "vegan-spa-4-new",
+      name: "Vegan Spa 4 Step",
+      price: 50,
+      duration: "60 min",
+    },
+    {
+      id: "vegan-spa-6-new",
+      name: "Vegan Spa 6 Step",
+      price: 60,
+      duration: "75 min",
+    },
+
+    // Nail Add-ons
+    {
+      id: "french-design-new",
+      name: "French & 2-Finger Design (Add-On)",
+      price: 0,
+      duration: "",
+    },
+    {
+      id: "infinite-shine-new",
+      name: "Infinite Shine Polish (Add-On)",
+      price: 5,
+      duration: "",
+    },
+    {
+      id: "10-finger-design-new",
+      name: "10 Finger Design (Add-On)",
+      price: 20,
+      duration: "",
+    },
+    {
+      id: "quick-dry-new",
+      name: "Quick Dry / Nail Strengthener",
+      price: 0,
+      duration: "",
+    },
+    {
+      id: "nail-repair-new",
+      name: "Nail Repair (Per Nail)",
+      price: 0,
+      duration: "",
+    },
+    {
+      id: "glue-powder-new",
+      name: "Glue & Powder Add-On",
+      price: 5,
+      duration: "",
+    },
+    { id: "acrylic-addon-new", name: "Acrylic Add-On", price: 9, duration: "" },
+    {
+      id: "hard-gel-addon-new",
+      name: "Hard Gel Add-On",
+      price: 12,
+      duration: "",
+    },
   ],
   facials: [
     {
@@ -320,7 +484,145 @@ const serviceOptions: Record<ServiceCategory, Service[]> = {
     { id: "half-arms", name: "Half Arms", price: 37, duration: "" },
     { id: "bikini", name: "Bikini", price: 35, duration: "", womenOnly: true },
   ],
-  "manicures-pedicures": [], // Empty for now as per requirements
+  "manicures-pedicures": [
+    // Manicure Services
+    { id: "basic-mani", name: "Basic Manicure", price: 20, duration: "30 min" },
+    {
+      id: "color-gel-mani",
+      name: "Color Gel Manicure",
+      price: 45,
+      duration: "45 min",
+    },
+    {
+      id: "powder-gel-mani",
+      name: "Powder Gel Manicure",
+      price: 55,
+      duration: "50 min",
+    },
+    {
+      id: "powder-gel-ext",
+      name: "Powder Gel with Extensions",
+      price: 75,
+      duration: "75 min",
+    },
+    {
+      id: "polish-change",
+      name: "Polish Change",
+      price: 10,
+      duration: "15 min",
+    },
+    { id: "soak-off", name: "Soak Off", price: 20, duration: "20 min" },
+    {
+      id: "enhancement-removal",
+      name: "Enhancement Removal",
+      price: 30,
+      duration: "30 min",
+    },
+    {
+      id: "acrylic-ext",
+      name: "Acrylic Extensions",
+      price: 90,
+      duration: "90 min",
+    },
+    {
+      id: "acrylic-maint",
+      name: "Acrylic Maintenance",
+      price: 50,
+      duration: "60 min",
+    },
+    {
+      id: "hard-gel-ext",
+      name: "Hard Gel Extensions",
+      price: 120,
+      duration: "90 min",
+    },
+    {
+      id: "hard-gel-maint",
+      name: "Hard Gel Maintenance",
+      price: 65,
+      duration: "75 min",
+    },
+
+    // Pedicure Services
+    { id: "basic-pedi", name: "Basic Pedicure", price: 35, duration: "45 min" },
+    {
+      id: "pedi-polish-change",
+      name: "Pedicure Polish Change",
+      price: 15,
+      duration: "20 min",
+    },
+    {
+      id: "add-gel-pedi",
+      name: "Add Gel Polish (Pedicure)",
+      price: 20,
+      duration: "",
+    },
+    {
+      id: "remove-gel-pedi",
+      name: "Remove Gel Polish (Pedicure)",
+      price: 10,
+      duration: "",
+    },
+    {
+      id: "callus-removal-pedi",
+      name: "Callus Removal (Pedicure)",
+      price: 10,
+      duration: "",
+    },
+    {
+      id: "hot-stone-pedi",
+      name: "Extra Massage with Hot Stone (Pedicure)",
+      price: 15,
+      duration: "",
+    },
+    {
+      id: "vegan-spa-4",
+      name: "Vegan Spa 4 Step",
+      price: 50,
+      duration: "60 min",
+    },
+    {
+      id: "vegan-spa-6",
+      name: "Vegan Spa 6 Step",
+      price: 60,
+      duration: "75 min",
+    },
+
+    // Add-ons
+    {
+      id: "french-design",
+      name: "French & 2-Finger Design (Add-On)",
+      price: 0,
+      duration: "",
+    },
+    {
+      id: "infinite-shine",
+      name: "Infinite Shine Polish (Add-On)",
+      price: 5,
+      duration: "",
+    },
+    {
+      id: "10-finger-design",
+      name: "10 Finger Design (Add-On)",
+      price: 20,
+      duration: "",
+    },
+    {
+      id: "quick-dry",
+      name: "Quick Dry / Nail Strengthener",
+      price: 0,
+      duration: "",
+    },
+    {
+      id: "nail-repair",
+      name: "Nail Repair (Per Nail)",
+      price: 0,
+      duration: "",
+    },
+    { id: "glue-powder", name: "Glue & Powder Add-On", price: 5, duration: "" },
+    { id: "acrylic-addon", name: "Acrylic Add-On", price: 9, duration: "" },
+    { id: "hard-gel-addon", name: "Hard Gel Add-On", price: 12, duration: "" },
+  ],
 };
 
 const timeSlots = ["9:30 AM - 7:30 PM"];
@@ -516,74 +818,57 @@ const Booking = () => {
                     ))}
                   </div>
 
-                  {/* Special message for Manicures & Pedicures */}
-                  {selectedCategory === "manicures-pedicures" && (
-                    <div className="text-center py-12">
-                      <div className="w-16 h-16 rounded-full bg-blush flex items-center justify-center mx-auto mb-4">
-                        <Sparkles className="w-8 h-8 text-gold" />
-                      </div>
-                      <h4 className="font-serif text-2xl font-semibold text-plum mb-2">
-                        Manicures & Pedicures
+                  {/* Services */}
+                  {selectedCategory && (
+                    <div className="space-y-3">
+                      <h4 className="font-medium text-foreground mb-4">
+                        Select Services:
                       </h4>
-                      <p className="text-muted-foreground">
-                        Coming soon to our booking system. Please check back
-                        later.
-                      </p>
+                      {serviceOptions[selectedCategory].map((service) => (
+                        <button
+                          key={service.id}
+                          onClick={() => toggleService(service.id)}
+                          className={cn(
+                            "w-full p-4 rounded-xl border-2 transition-all duration-300 flex items-center justify-between",
+                            selectedServices.includes(service.id)
+                              ? "border-gold bg-blush"
+                              : "border-border hover:border-gold/50"
+                          )}
+                        >
+                          <div className="flex items-center gap-3">
+                            <div
+                              className={cn(
+                                "w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors",
+                                selectedServices.includes(service.id)
+                                  ? "border-gold bg-gold text-charcoal"
+                                  : "border-border"
+                              )}
+                            >
+                              {selectedServices.includes(service.id) && (
+                                <Check className="w-4 h-4" />
+                              )}
+                            </div>
+                            <div className="text-left">
+                              <p className="font-medium text-foreground">
+                                {service.name}
+                                {service.womenOnly && (
+                                  <span className="ml-2 text-xs bg-plum/10 text-plum px-2 py-1 rounded">
+                                    Women Only
+                                  </span>
+                                )}
+                              </p>
+                              <p className="text-sm text-muted-foreground">
+                                {service.duration}
+                              </p>
+                            </div>
+                          </div>
+                          <span className="font-serif text-xl font-semibold text-gold">
+                            ${service.price}
+                          </span>
+                        </button>
+                      ))}
                     </div>
                   )}
-
-                  {/* Services */}
-                  {selectedCategory &&
-                    selectedCategory !== "manicures-pedicures" && (
-                      <div className="space-y-3">
-                        <h4 className="font-medium text-foreground mb-4">
-                          Select Services:
-                        </h4>
-                        {serviceOptions[selectedCategory].map((service) => (
-                          <button
-                            key={service.id}
-                            onClick={() => toggleService(service.id)}
-                            className={cn(
-                              "w-full p-4 rounded-xl border-2 transition-all duration-300 flex items-center justify-between",
-                              selectedServices.includes(service.id)
-                                ? "border-gold bg-blush"
-                                : "border-border hover:border-gold/50"
-                            )}
-                          >
-                            <div className="flex items-center gap-3">
-                              <div
-                                className={cn(
-                                  "w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors",
-                                  selectedServices.includes(service.id)
-                                    ? "border-gold bg-gold text-charcoal"
-                                    : "border-border"
-                                )}
-                              >
-                                {selectedServices.includes(service.id) && (
-                                  <Check className="w-4 h-4" />
-                                )}
-                              </div>
-                              <div className="text-left">
-                                <p className="font-medium text-foreground">
-                                  {service.name}
-                                  {service.womenOnly && (
-                                    <span className="ml-2 text-xs bg-plum/10 text-plum px-2 py-1 rounded">
-                                      Women Only
-                                    </span>
-                                  )}
-                                </p>
-                                <p className="text-sm text-muted-foreground">
-                                  {service.duration}
-                                </p>
-                              </div>
-                            </div>
-                            <span className="font-serif text-xl font-semibold text-gold">
-                              ${service.price}
-                            </span>
-                          </button>
-                        ))}
-                      </div>
-                    )}
                 </div>
               )}
 
@@ -605,7 +890,10 @@ const Booking = () => {
                         selected={selectedDate}
                         onSelect={setSelectedDate}
                         disabled={(date) =>
-                          date < new Date() || date.getDay() === 0
+                          date <
+                            new Date(
+                              new Date().setDate(new Date().getDate() - 1)
+                            ) || date.getDay() === 0
                         }
                         className="rounded-xl border border-border p-3"
                       />

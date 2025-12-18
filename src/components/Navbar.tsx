@@ -48,7 +48,7 @@ export const Navbar = () => {
             <img
               src="/logopn-removebg.jpg"
               alt="Polished Nails Logo"
-              className="h-20 w-auto object-contain relative"
+              className="h-14 w-auto object-contain relative"
             />
           </Link>
 

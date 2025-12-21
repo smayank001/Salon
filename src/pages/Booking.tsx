@@ -720,9 +720,65 @@ const Booking = () => {
   };
 
   const handleSubmit = () => {
-    // Show success message without email notification
-    toast.success("Booking Request Submitted!", {
-      description: "We'll confirm your appointment shortly.",
+    // Prepare booking details for email
+    const serviceNames = selectedServices
+      .map(
+        (id) =>
+          serviceOptions[selectedCategory!]?.find((s) => s.id === id)?.name
+      )
+      .join(", ");
+
+    const bookingDetails = {
+      clientName: formData.name,
+      clientEmail: formData.email,
+      clientPhone: formData.phone,
+      services: serviceNames,
+      appointmentDate: selectedDate?.toLocaleDateString("en-US", {
+        weekday: "long",
+        month: "long",
+        day: "numeric",
+      }),
+      appointmentTime: selectedTime,
+      totalAmount: calculateTotal(),
+      specialNotes: formData.notes,
+    };
+
+    // Create mailto link with pre-filled content
+    const subject = `Appointment Booking - ${bookingDetails.clientName}`;
+    const body = `
+Hello,
+
+I would like to book an appointment with PolishedNails. Here are my details:
+
+Name: ${bookingDetails.clientName}
+Email: ${bookingDetails.clientEmail}
+Phone: ${bookingDetails.clientPhone}
+Services: ${bookingDetails.services}
+Date: ${bookingDetails.appointmentDate}
+Time: ${bookingDetails.appointmentTime}
+Total Amount: $${bookingDetails.totalAmount}
+
+Special Notes:
+${bookingDetails.specialNotes || "None"}
+
+Please confirm this appointment at your earliest convenience.
+
+Thank you!
+    `.trim();
+
+    // Encode subject and body for URL
+    const encodedSubject = encodeURIComponent(subject);
+    const encodedBody = encodeURIComponent(body);
+
+    // Create Gmail compose URL
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=polishednails11434@gmail.com&su=${encodedSubject}&body=${encodedBody}`;
+
+    // Open Gmail in a new tab
+    window.open(gmailUrl, "_blank");
+
+    // Show success message
+    toast.success("Redirecting to Gmail!", {
+      description: "Please send the email to complete your booking.",
     });
 
     // Reset form

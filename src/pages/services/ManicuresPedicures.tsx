@@ -8,9 +8,14 @@ import { Sparkles, Gem } from "lucide-react";
 const manicureServices = [
   {
     name: "Basic Manicure",
-    price: "$20",
+    price: "$25",
     description:
       "Nails shaped to desired length, cuticles trimmed, followed by a soothing hand massage and choice of polish.",
+  },
+  {
+    name: "Acrylic Full Set",
+    price: "$38+",
+    description: "Full acrylic nails with polish.",
   },
   {
     name: "Color Gel Manicure",

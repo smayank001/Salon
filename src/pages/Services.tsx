@@ -222,7 +222,7 @@ const Services = () => {
                     </div>
                     <div className="flex flex-col sm:items-end">
                       <p className="font-serif text-xl font-semibold text-gold">
-                        $12+
+                        $17
                       </p>
                     </div>
                   </div>
@@ -233,7 +233,7 @@ const Services = () => {
                     </div>
                     <div className="flex flex-col sm:items-end">
                       <p className="font-serif text-xl font-semibold text-gold">
-                        $42+
+                        $62
                       </p>
                     </div>
                   </div>
@@ -244,7 +244,7 @@ const Services = () => {
                     </div>
                     <div className="flex flex-col sm:items-end">
                       <p className="font-serif text-xl font-semibold text-gold">
-                        $12+
+                        $12
                       </p>
                     </div>
                   </div>
@@ -255,7 +255,7 @@ const Services = () => {
                     </div>
                     <div className="flex flex-col sm:items-end">
                       <p className="font-serif text-xl font-semibold text-gold">
-                        $12+
+                        $15
                       </p>
                     </div>
                   </div>
@@ -266,7 +266,7 @@ const Services = () => {
                     </div>
                     <div className="flex flex-col sm:items-end">
                       <p className="font-serif text-xl font-semibold text-gold">
-                        $26+
+                        $62
                       </p>
                     </div>
                   </div>
@@ -280,7 +280,7 @@ const Services = () => {
                     </div>
                     <div className="flex flex-col sm:items-end">
                       <p className="font-serif text-xl font-semibold text-gold">
-                        $32+
+                        $52
                       </p>
                     </div>
                   </div>
@@ -291,7 +291,7 @@ const Services = () => {
                     </div>
                     <div className="flex flex-col sm:items-end">
                       <p className="font-serif text-xl font-semibold text-gold">
-                        $17+
+                        $27
                       </p>
                     </div>
                   </div>
@@ -302,7 +302,7 @@ const Services = () => {
                     </div>
                     <div className="flex flex-col sm:items-end">
                       <p className="font-serif text-xl font-semibold text-gold">
-                        $37+
+                        $37
                       </p>
                     </div>
                   </div>
@@ -313,7 +313,7 @@ const Services = () => {
                     </div>
                     <div className="flex flex-col sm:items-end">
                       <p className="font-serif text-xl font-semibold text-gold">
-                        $52+
+                        $52
                       </p>
                     </div>
                   </div>
@@ -355,7 +355,7 @@ const Services = () => {
                   </div>
                   <div className="flex flex-col sm:items-end">
                     <p className="font-serif text-xl font-semibold text-gold">
-                      $45+
+                      $38+
                     </p>
                   </div>
                 </div>
@@ -435,7 +435,7 @@ const Services = () => {
                   </div>
                   <div className="flex flex-col sm:items-end">
                     <p className="font-serif text-xl font-semibold text-gold">
-                      $58
+                      $70
                     </p>
                   </div>
                 </div>
@@ -448,7 +448,7 @@ const Services = () => {
                   </div>
                   <div className="flex flex-col sm:items-end">
                     <p className="font-serif text-xl font-semibold text-gold">
-                      $40
+                      $60
                     </p>
                   </div>
                 </div>
@@ -510,7 +510,6 @@ const Services = () => {
                     </p>
                   </div>
                 </div>
-
                 <div className="p-4 flex flex-col sm:flex-row sm:items-center justify-between transition-colors group relative">
                   <div className="mb-2 sm:mb-0">
                     <p className="font-medium text-foreground">
@@ -519,11 +518,10 @@ const Services = () => {
                   </div>
                   <div className="flex flex-col sm:items-end">
                     <p className="font-serif text-xl font-semibold text-gold">
-                      $53
+                      $58
                     </p>
                   </div>
-                </div>
-
+                </div>{" "}
                 <div className="p-4 flex flex-col sm:flex-row sm:items-center justify-between transition-colors group relative">
                   <div className="mb-2 sm:mb-0">
                     <p className="font-medium text-foreground">Full Set</p>
@@ -534,7 +532,6 @@ const Services = () => {
                     </p>
                   </div>
                 </div>
-
                 <div className="p-4 flex flex-col sm:flex-row sm:items-center justify-between transition-colors group relative">
                   <div className="mb-2 sm:mb-0">
                     <p className="font-medium text-foreground">
@@ -543,7 +540,7 @@ const Services = () => {
                   </div>
                   <div className="flex flex-col sm:items-end">
                     <p className="font-serif text-xl font-semibold text-gold">
-                      $58
+                      $63
                     </p>
                   </div>
                 </div>
@@ -623,7 +620,7 @@ const Services = () => {
                   </div>
                   <div className="flex flex-col sm:items-end">
                     <p className="font-serif text-xl font-semibold text-gold">
-                      $55
+                      $50
                     </p>
                   </div>
                 </div>
@@ -960,7 +957,7 @@ const Services = () => {
                     </div>
                     <div className="flex flex-col sm:items-end">
                       <p className="font-serif text-xl font-semibold text-gold">
-                        $15
+                        $12+
                       </p>
                     </div>
                   </div>
@@ -1000,7 +997,7 @@ const Services = () => {
                     </div>
                     <div className="flex flex-col sm:items-end">
                       <p className="font-serif text-xl font-semibold text-gold">
-                        $10
+                        $10-$12
                       </p>
                     </div>
                   </div>
@@ -1013,7 +1010,7 @@ const Services = () => {
                     </div>
                     <div className="flex flex-col sm:items-end">
                       <p className="font-serif text-xl font-semibold text-gold">
-                        $15
+                        $10-$12
                       </p>
                     </div>
                   </div>

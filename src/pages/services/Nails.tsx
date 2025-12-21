@@ -6,171 +6,122 @@ import { Link } from "react-router-dom";
 import { Sparkles, Check, Gem } from "lucide-react";
 
 const nailServices = [
-  {
-    name: "Classic Manicure",
-    price: "$35",
-    duration: "30 min",
-    description:
-      "Traditional nail care service including trimming, shaping, cuticle work, and polish application.",
-  },
-  {
-    name: "Signature Manicure",
-    price: "$55",
-    duration: "45 min",
-    description:
-      "Enhanced manicure with exfoliation, intensive moisturizing treatment, and extended massage.",
-  },
-  {
-    name: "Gel Manicure",
-    price: "$65",
-    duration: "50 min",
-    description:
-      "Long-lasting gel polish application with traditional manicure prep and finishing.",
-  },
-  {
-    name: "Luxury Pedicure",
-    price: "$75",
-    duration: "60 min",
-    description:
-      "Premium foot care experience with soak, exfoliation, mask, and relaxing massage.",
-  },
-  {
-    name: "Gel Extensions",
-    price: "$95",
-    duration: "90 min",
-    description:
-      "Beautiful gel nail extensions with custom shaping and design.",
-  },
-  {
-    name: "Nail Art (per nail)",
-    price: "$10+",
-    duration: "varies",
-    description:
-      "Custom artistic designs and embellishments for individual nails.",
-  },
   // Manicure Services
   {
-    name: "Basic Manicure",
+    name: "Classic Manicure",
+    price: "$25",
+    description: "Trimming, shaping nails, cuticle detailing, massage, polish",
+  },
+  {
+    name: "Deluxe Manicure",
+    price: "$40",
+    description:
+      "Trimming, shaping nails, cuticle detailing, sugar scrub, collagen mask",
+  },
+  {
+    name: "Add Gel Polish to Any Manicure",
+    price: "$15",
+    description: "Gel polish upgrade for any manicure service",
+  },
+
+  // Princess Menu
+  {
+    name: "Princess Manicure",
     price: "$20",
-    duration: "",
-    description:
-      "Nails shaped to desired length, cuticles trimmed, followed by a soothing hand massage and choice of polish.",
+    description: "Gentle manicure for kids with soft filing and polish",
   },
   {
-    name: "Color Gel Manicure",
-    price: "$45",
-    duration: "",
-    description:
-      "Nails shaped to desired length, gel polish applied and cured for no-chip finish, followed by a hand massage.",
-  },
-  {
-    name: "Powder Gel Manicure",
-    price: "$55",
-    duration: "",
-    description:
-      "Nails shaped and reinforced with powder gel for added strength, with a relaxing hand massage.",
-  },
-  {
-    name: "Powder Gel with Extensions",
-    price: "$75",
-    duration: "",
-    description:
-      "Temporary nail extension with powder gel, includes shaping and hand massage.",
-  },
-  {
-    name: "Polish Change",
-    price: "$10",
-    duration: "",
-    description: "Filing and polish change without trimming or cuticle work.",
-  },
-  {
-    name: "Soak Off",
-    price: "$20",
-    duration: "",
-    description:
-      "Removal of gel polish or powder gel (not for enhancements); add manicure for +$10.",
-  },
-  {
-    name: "Enhancement Removal",
+    name: "Princess Pedicure",
     price: "$30",
-    duration: "",
-    description:
-      "Safe electric file removal of acrylic or hard gel enhancements (add manicure +$10).",
+    description: "Relaxing pedicure for kids with soak, trim, and polish",
   },
   {
-    name: "Acrylic Extensions",
-    price: "$90",
-    duration: "",
-    description: "Full acrylic nails with polish (add color gel +$10).",
+    name: "Princess Combo",
+    price: "$40",
+    description: "Princess manicure and pedicure package for kids",
   },
-  {
-    name: "Acrylic Maintenance",
-    price: "$50",
-    duration: "",
-    description:
-      "Refill/maintenance for acrylic enhancements (add color gel +$10).",
-  },
-  {
-    name: "Hard Gel Extensions",
-    price: "$120",
-    duration: "",
-    description: "Hard gel nail extensions for long wear.",
-  },
-  {
-    name: "Hard Gel Maintenance",
-    price: "$65",
-    duration: "",
-    description: "Refill/maintenance for hard gel enhancements.",
-  },
+
   // Pedicure Services
   {
-    name: "Basic Pedicure",
-    price: "$35",
-    duration: "",
+    name: "Classic Pedicure",
+    price: "$40",
     description:
-      "Feet soaked, nails shaped, cuticles trimmed, scrub, and relaxing foot massage with polish.",
+      "Trimming, shaping nails, cuticle detailing, sugar scrub, callus treatment, hot fragrance towel with massage, polish",
   },
   {
-    name: "Pedicure Polish Change",
+    name: "Deluxe Pedicure",
+    price: "$52",
+    description: "Classic pedicure, callus treatment, paraffin mask, pedi bomb",
+  },
+  {
+    name: "Hot Spring Organic Spa Pedicure",
+    price: "$57",
+    description:
+      "Massage packet, hot stone massage, collagen mask – 45 minutes",
+  },
+  {
+    name: "Signature Pedicure",
+    price: "$62",
+    description:
+      "Massage packet, pedi bomb, fresh orange peel, hot stone massage, collagen mask – 50 minutes",
+  },
+  {
+    name: "Ultimate Pedicure",
+    price: "$72",
+    description:
+      "Jelly pedicure, pedi bomb, callus treatment, hot stone massage, collagen mask – 60 minutes",
+  },
+  {
+    name: "Add Gel Polish to Any Pedicure",
     price: "$15",
-    duration: "",
-    description: "Pedicure polish change without length trimming.",
+    description: "Gel polish upgrade for any pedicure service",
+  },
+
+  // Additional Nail Services
+  {
+    name: "Polish Change (Hands)",
+    price: "$10",
+    description: "Filing and polish change for hands",
   },
   {
-    name: "Add Gel Polish (Pedicure)",
-    price: "+$20",
-    duration: "",
-    description: "Gel polish add-on for pedicure services.",
+    name: "Polish Change (Toes)",
+    price: "$12",
+    description: "Filing and polish change for toes",
   },
   {
-    name: "Remove Gel Polish (Pedicure)",
-    price: "+$10",
-    duration: "",
-    description: "Gel polish removal as an add-on.",
+    name: "Remove Gel Polish",
+    price: "$10 – $15",
+    description: "Removal of gel polish service",
   },
   {
-    name: "Callus Removal (Pedicure)",
-    price: "+$10",
-    duration: "",
-    description: "Extra callus removal add-on (includes +10 minutes).",
+    name: "Remove Dip Powder",
+    price: "$12+",
+    description: "Removal of dip powder service",
   },
   {
-    name: "Extra Massage with Hot Stone (Pedicure)",
-    price: "+$15",
-    duration: "",
-    description: "Additional massage with hot stone (add +10 min).",
+    name: "Nail Repair",
+    price: "$5+",
+    description: "Repair service for damaged nails",
   },
   {
-    name: "Vegan Spa 4 Step",
-    price: "$50",
-    duration: "",
-    description: "Vegan soak, scrub, mud mask, massage and polish finish.",
+    name: "Paraffin Hands / Feet",
+    price: "$10 – $12",
+    description: "Paraffin treatment for hands or feet",
   },
   {
-    name: "Vegan Spa 6 Step",
-    price: "$60",
-    duration: "",
-    description: "Vegan pedicure with callus removal and collagen socks.",
+    name: "Gel Polish Change (Hands)",
+    price: "$25",
+    description: "Gel polish change for hands",
+  },
+  {
+    name: "Gel Polish Change (Toes)",
+    price: "$30",
+    description: "Gel polish change for toes",
+  },
+  {
+    name: "Medium Shape",
+    price: "$5",
+    description: "Medium nail shape service",
   },
 ];
 
@@ -328,11 +279,10 @@ const Nails = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-serif text-3xl md:text-4xl font-semibold text-plum mb-4 text-center">
-              Classic Nail Services
+              Nail Services
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-12 text-center max-w-2xl mx-auto">
-              Our signature nail care services using premium products for
-              long-lasting results.
+              Comprehensive nail care services for hands and feet.
             </p>
 
             <div className="bg-card rounded-2xl border border-border/50 overflow-hidden">
@@ -476,59 +426,6 @@ const Nails = () => {
             </div>
 
             {/* Book This Service Button for Kids Menu */}
-            <div className="mt-8">
-              <Link to="/booking">
-                <Button variant="hero" className="w-full">
-                  <Sparkles className="w-4 h-4" />
-                  Book This Service
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Nail Enhancements & Add-Ons Section */}
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="font-serif text-3xl md:text-4xl font-semibold text-plum mb-4 text-center">
-              Nail Enhancements & Add-Ons
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-12 text-center max-w-2xl mx-auto">
-              Customize your nail experience with our enhancement options and
-              add-ons.
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              {nailAddons.map((addon) => (
-                <div
-                  key={addon.name}
-                  className="bg-card rounded-xl border border-border/50 p-6 transition-all duration-300 hover:shadow-lg group relative"
-                >
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="font-medium text-foreground">
-                      {addon.name}
-                    </h3>
-                    {addon.price && (
-                      <p className="font-serif text-xl font-semibold text-gold">
-                        {addon.price}
-                      </p>
-                    )}
-                  </div>
-                  <div className="absolute bottom-full left-0 mb-2 hidden group-hover:block w-64 bg-card border border-border/50 rounded-lg shadow-lg p-3 z-10">
-                    <p className="text-sm text-muted-foreground">
-                      {addon.description}
-                    </p>
-                  </div>
-                  <p className="text-sm text-muted-foreground group-hover:hidden">
-                    Hover for details
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            {/* Book This Service Button for Add-ons */}
             <div className="mt-8">
               <Link to="/booking">
                 <Button variant="hero" className="w-full">

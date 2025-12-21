@@ -28,7 +28,7 @@ const waxingServices = [
   },
   {
     name: "Sideburns",
-    price: "$12",
+    price: "$15",
     duration: "",
     description: "Cleans and shapes the sideburn area along the cheeks.",
   },
@@ -72,7 +72,7 @@ const waxingServices = [
   },
   {
     name: "Bikini",
-    price: "$35",
+    price: "$52",
     duration: "",
     description:
       "Clean-up around the bikini line for a neat, tidy finish. Service for women only.",

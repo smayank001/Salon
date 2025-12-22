@@ -163,7 +163,7 @@ const Services = () => {
             </div>
 
             {/* Manicures & Pedicures Card */}
-            <div className="premium-card gold-border rounded-2xl overflow-hidden">
+            {/* <div className="premium-card gold-border rounded-2xl overflow-hidden">
               <div className="relative h-48 overflow-hidden">
                 <img
                   src="/manipedi.jpg"
@@ -190,7 +190,7 @@ const Services = () => {
                   </Button>
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -507,40 +507,6 @@ const Services = () => {
                   <div className="flex flex-col sm:items-end">
                     <p className="font-serif text-xl font-semibold text-gold">
                       $48
-                    </p>
-                  </div>
-                </div>
-                <div className="p-4 flex flex-col sm:flex-row sm:items-center justify-between transition-colors group relative">
-                  <div className="mb-2 sm:mb-0">
-                    <p className="font-medium text-foreground">
-                      Over Natural Nails (French)
-                    </p>
-                  </div>
-                  <div className="flex flex-col sm:items-end">
-                    <p className="font-serif text-xl font-semibold text-gold">
-                      $58
-                    </p>
-                  </div>
-                </div>{" "}
-                <div className="p-4 flex flex-col sm:flex-row sm:items-center justify-between transition-colors group relative">
-                  <div className="mb-2 sm:mb-0">
-                    <p className="font-medium text-foreground">Full Set</p>
-                  </div>
-                  <div className="flex flex-col sm:items-end">
-                    <p className="font-serif text-xl font-semibold text-gold">
-                      $53
-                    </p>
-                  </div>
-                </div>
-                <div className="p-4 flex flex-col sm:flex-row sm:items-center justify-between transition-colors group relative">
-                  <div className="mb-2 sm:mb-0">
-                    <p className="font-medium text-foreground">
-                      Full Set (French)
-                    </p>
-                  </div>
-                  <div className="flex flex-col sm:items-end">
-                    <p className="font-serif text-xl font-semibold text-gold">
-                      $63
                     </p>
                   </div>
                 </div>
@@ -868,7 +834,7 @@ const Services = () => {
       </section>
 
       {/* Additional Services Section */}
-      <section className="py-16 bg-background">
+      {/* <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-serif text-3xl md:text-4xl font-semibold text-plum mb-8 text-center">
@@ -882,7 +848,6 @@ const Services = () => {
                 </h3>
               </div>
               <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border/50">
-                {/* Left Column */}
                 <div className="divide-y divide-border/50">
                   <div className="p-4 flex flex-col sm:flex-row sm:items-center justify-between transition-colors group relative">
                     <div className="mb-2 sm:mb-0">
@@ -976,7 +941,6 @@ const Services = () => {
                   </div>
                 </div>
 
-                {/* Right Column */}
                 <div className="divide-y divide-border/50">
                   <div className="p-4 flex flex-col sm:flex-row sm:items-center justify-between transition-colors group relative">
                     <div className="mb-2 sm:mb-0">
@@ -1066,10 +1030,10 @@ const Services = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Cash Reward Note */}
-      <section className="py-8 bg-background">
+      {/* <section className="py-8 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-gold/10 border border-gold/30 rounded-xl p-6 text-center">
@@ -1081,7 +1045,7 @@ const Services = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 bg-plum text-champagne relative overflow-hidden">

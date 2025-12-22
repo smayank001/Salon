@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Sparkles, Check, Gem } from "lucide-react";
 
-const nailServices = [
-  // Manicure Services
+// Manicure Services
+const manicureServices = [
   {
     name: "Classic Manicure",
     price: "$25",
@@ -23,8 +23,10 @@ const nailServices = [
     price: "$15",
     description: "Gel polish upgrade for any manicure service",
   },
+];
 
-  // Princess Menu
+// Princess Menu
+const princessMenuServices = [
   {
     name: "Princess Manicure",
     price: "$20",
@@ -40,8 +42,10 @@ const nailServices = [
     price: "$40",
     description: "Princess manicure and pedicure package for kids",
   },
+];
 
-  // Pedicure Services
+// Pedicure Services
+const pedicureServices = [
   {
     name: "Classic Pedicure",
     price: "$40",
@@ -76,182 +80,42 @@ const nailServices = [
     price: "$15",
     description: "Gel polish upgrade for any pedicure service",
   },
+];
 
-  // Additional Nail Services
+// Acrylic Services
+const acrylicServices = [
   {
-    name: "Polish Change (Hands)",
+    name: "Acrylic Full Set",
+    price: "$38+",
+    description: "Full acrylic nails with polish",
+  },
+];
+
+// Organic Dipping Powder Services
+const organicDippingPowderServices = [
+  {
+    name: "Over Natural Nails",
+    price: "$48",
+    description: "Dip powder application over natural nails",
+  },
+];
+
+// Gel X Services
+const gelXServices = [
+  {
+    name: "Full Set (Gel X)",
+    price: "$65",
+    description: "Full Gel X nail extensions",
+  },
+  {
+    name: "Fill In (Gel X)",
+    price: "$55",
+    description: "Gel X fill-in service",
+  },
+  {
+    name: "With Manicure Add",
     price: "$10",
-    description: "Filing and polish change for hands",
-  },
-  {
-    name: "Polish Change (Toes)",
-    price: "$12",
-    description: "Filing and polish change for toes",
-  },
-  {
-    name: "Remove Gel Polish",
-    price: "$10 – $15",
-    description: "Removal of gel polish service",
-  },
-  {
-    name: "Remove Dip Powder",
-    price: "$12+",
-    description: "Removal of dip powder service",
-  },
-  {
-    name: "Nail Repair",
-    price: "$5+",
-    description: "Repair service for damaged nails",
-  },
-  {
-    name: "Paraffin Hands / Feet",
-    price: "$10 – $12",
-    description: "Paraffin treatment for hands or feet",
-  },
-  {
-    name: "Gel Polish Change (Hands)",
-    price: "$25",
-    description: "Gel polish change for hands",
-  },
-  {
-    name: "Gel Polish Change (Toes)",
-    price: "$30",
-    description: "Gel polish change for toes",
-  },
-  {
-    name: "Medium Shape",
-    price: "$5",
-    description: "Medium nail shape service",
-  },
-];
-
-const repairNailServices = [
-  {
-    name: "1 Finger",
-    price: "$2.00",
-    description: "Repair one damaged or broken nail on either hand or foot.",
-  },
-  {
-    name: "2 Fingers",
-    price: "$5.00",
-    description: "Repair for any two damaged nails.",
-  },
-  {
-    name: "3 Fingers",
-    price: "$7.00",
-    description: "Repair for three damaged or broken nails.",
-  },
-  {
-    name: "4 Fingers",
-    price: "$10.00",
-    description: "Repair service for four nails that need fixing.",
-  },
-  {
-    name: "5 Fingers Design",
-    price: "$13.00",
-    description: "Repair plus simple design on five nails.",
-  },
-  {
-    name: "6 Fingers Design",
-    price: "$16.00",
-    description: "Repair plus design work on six nails.",
-  },
-  {
-    name: "7 Fingers Design",
-    price: "$17.00",
-    description: "Repair and design for seven nails.",
-  },
-  {
-    name: "8 Fingers Design",
-    price: "$20.00",
-    description: "Repair and design for eight nails.",
-  },
-  {
-    name: "9 Fingers",
-    price: "$23.00",
-    description: "Repair for nine nails needing extra care.",
-  },
-  {
-    name: "10 Fingers Design",
-    price: "$25.00",
-    description: "Full set repair and design on all ten nails.",
-  },
-];
-
-const kidsMenuServices = [
-  {
-    name: "Princess Mani",
-    price: "$15.00",
-    description: "Gentle manicure for kids with soft filing and polish.",
-  },
-  {
-    name: "Princess Pedi",
-    price: "$25.00",
-    description: "Relaxing pedicure for kids with soak, trim, and polish.",
-  },
-  {
-    name: "Princess Combo",
-    price: "$35.00",
-    description: "Princess manicure and pedicure package for kids.",
-  },
-  {
-    name: "Kid Polish Change Hand",
-    price: "$7.00",
-    description: "Polish change on hands only for kids.",
-  },
-  {
-    name: "Kid Polish Change Toes",
-    price: "$7.00",
-    description: "Polish change on toes only for kids.",
-  },
-  {
-    name: "Add Gel",
-    price: "$10.00",
-    description: "Upgrade to gel polish for kids' services.",
-  },
-];
-
-// Add-ons section
-const nailAddons = [
-  {
-    name: "French & 2-Finger Design (Add-On)",
-    price: "",
-    description: "Decorative French or two-finger design for any manicure.",
-  },
-  {
-    name: "Infinite Shine Polish (Add-On)",
-    price: "+$5",
-    description: "High-shine polish add-on.",
-  },
-  {
-    name: "10 Finger Design (Add-On)",
-    price: "+$20",
-    description: "Design on all ten fingers (multi-color/design).",
-  },
-  {
-    name: "Quick Dry / Nail Strengthener",
-    price: "",
-    description: "Quick-dry or strengthening polish add-on.",
-  },
-  {
-    name: "Nail Repair (Per Nail)",
-    price: "",
-    description: "Repair service per damaged nail.",
-  },
-  {
-    name: "Glue & Powder Add-On",
-    price: "$5",
-    description: "Glue + powder add-on for natural nails.",
-  },
-  {
-    name: "Acrylic Add-On",
-    price: "$9",
-    description: "Acrylic add to design or repair.",
-  },
-  {
-    name: "Hard Gel Add-On",
-    price: "$12",
-    description: "Hard gel add-on enhancement.",
+    description: "Add manicure to Gel X service",
   },
 ];
 
@@ -285,29 +149,21 @@ const Nails = () => {
               Comprehensive nail care services for hands and feet.
             </p>
 
-            <div className="bg-card rounded-2xl border border-border/50 overflow-hidden">
-              <div className="p-4 bg-blush border-b border-border/50">
-                <h3 className="font-serif text-lg font-semibold text-plum">
-                  Services & Pricing
-                </h3>
-              </div>
-              <div className="divide-y divide-border/50">
-                {nailServices.map((service) => (
+            {/* Manicure Services */}
+            <div className="mb-16">
+              <h3 className="font-serif text-2xl font-semibold text-plum mb-6 text-center">
+                Manicure Services
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {manicureServices.map((service) => (
                   <div
                     key={service.name}
-                    className="p-4 flex flex-col sm:flex-row sm:items-center justify-between transition-all duration-300 hover:shadow-lg group relative"
+                    className="bg-card rounded-xl border border-border/50 p-6 transition-all duration-300 hover:shadow-lg group relative"
                   >
-                    <div className="mb-2 sm:mb-0">
-                      <p className="font-medium text-foreground">
+                    <div className="flex justify-between items-start mb-2">
+                      <h4 className="font-medium text-foreground">
                         {service.name}
-                      </p>
-                      {service.duration && (
-                        <p className="text-sm text-muted-foreground">
-                          {service.duration}
-                        </p>
-                      )}
-                    </div>
-                    <div className="flex flex-col sm:items-end">
+                      </h4>
                       <p className="font-serif text-xl font-semibold text-gold">
                         {service.price}
                       </p>
@@ -317,122 +173,220 @@ const Nails = () => {
                         {service.description}
                       </p>
                     </div>
-                    <p className="text-sm text-muted-foreground group-hover:hidden mt-1">
+                    <p className="text-sm text-muted-foreground group-hover:hidden">
                       Hover for details
                     </p>
                   </div>
                 ))}
               </div>
-              <div className="p-4 bg-blush/50">
+              <div className="mt-8 text-center">
                 <Link to="/booking">
-                  <Button variant="hero" className="w-full">
+                  <Button variant="hero">
                     <Sparkles className="w-4 h-4" />
-                    Book This Service
+                    Book Manicure Service
                   </Button>
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Repair Nails Section */}
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="font-serif text-3xl md:text-4xl font-semibold text-plum mb-4 text-center">
-              Repair Nails
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-12 text-center max-w-2xl mx-auto">
-              Restore your nails to their beautiful best with our expert repair
-              services.
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              {repairNailServices.map((service) => (
-                <div
-                  key={service.name}
-                  className="bg-card rounded-xl border border-border/50 p-6 transition-all duration-300 hover:shadow-lg group relative"
-                >
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="font-medium text-foreground">
-                      {service.name}
-                    </h3>
-                    <p className="font-serif text-xl font-semibold text-gold">
-                      {service.price}
+            {/* Princess Menu */}
+            <div className="mb-16">
+              <h3 className="font-serif text-2xl font-semibold text-plum mb-6 text-center">
+                Princess Menu
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {princessMenuServices.map((service) => (
+                  <div
+                    key={service.name}
+                    className="bg-card rounded-xl border border-border/50 p-6 transition-all duration-300 hover:shadow-lg group relative"
+                  >
+                    <div className="flex justify-between items-start mb-2">
+                      <h4 className="font-medium text-foreground">
+                        {service.name}
+                      </h4>
+                      <p className="font-serif text-xl font-semibold text-gold">
+                        {service.price}
+                      </p>
+                    </div>
+                    <div className="absolute bottom-full left-0 mb-2 hidden group-hover:block w-64 bg-card border border-border/50 rounded-lg shadow-lg p-3 z-10">
+                      <p className="text-sm text-muted-foreground">
+                        {service.description}
+                      </p>
+                    </div>
+                    <p className="text-sm text-muted-foreground group-hover:hidden">
+                      Hover for details
                     </p>
                   </div>
-                  <div className="absolute bottom-full left-0 mb-2 hidden group-hover:block w-64 bg-card border border-border/50 rounded-lg shadow-lg p-3 z-10">
-                    <p className="text-sm text-muted-foreground">
-                      {service.description}
-                    </p>
-                  </div>
-                  <p className="text-sm text-muted-foreground group-hover:hidden">
-                    Hover for details
-                  </p>
-                </div>
-              ))}
+                ))}
+              </div>
+              <div className="mt-8 text-center">
+                <Link to="/booking">
+                  <Button variant="hero">
+                    <Sparkles className="w-4 h-4" />
+                    Book Princess Service
+                  </Button>
+                </Link>
+              </div>
             </div>
 
-            {/* Book This Service Button for Repair Nails */}
-            <div className="mt-8">
-              <Link to="/booking">
-                <Button variant="hero" className="w-full">
-                  <Sparkles className="w-4 h-4" />
-                  Book This Service
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Kids Menu Section */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="font-serif text-3xl md:text-4xl font-semibold text-plum mb-4 text-center">
-              Kids Menu
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-12 text-center max-w-2xl mx-auto">
-              Special pampering packages designed just for our little
-              princesses.
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              {kidsMenuServices.map((service) => (
-                <div
-                  key={service.name}
-                  className="bg-card rounded-xl border border-border/50 p-6 transition-all duration-300 hover:shadow-lg group relative"
-                >
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="font-medium text-foreground">
-                      {service.name}
-                    </h3>
-                    <p className="font-serif text-xl font-semibold text-gold">
-                      {service.price}
+            {/* Pedicure Services */}
+            <div className="mb-16">
+              <h3 className="font-serif text-2xl font-semibold text-plum mb-6 text-center">
+                Pedicure Services
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {pedicureServices.map((service) => (
+                  <div
+                    key={service.name}
+                    className="bg-card rounded-xl border border-border/50 p-6 transition-all duration-300 hover:shadow-lg group relative"
+                  >
+                    <div className="flex justify-between items-start mb-2">
+                      <h4 className="font-medium text-foreground">
+                        {service.name}
+                      </h4>
+                      <p className="font-serif text-xl font-semibold text-gold">
+                        {service.price}
+                      </p>
+                    </div>
+                    <div className="absolute bottom-full left-0 mb-2 hidden group-hover:block w-64 bg-card border border-border/50 rounded-lg shadow-lg p-3 z-10">
+                      <p className="text-sm text-muted-foreground">
+                        {service.description}
+                      </p>
+                    </div>
+                    <p className="text-sm text-muted-foreground group-hover:hidden">
+                      Hover for details
                     </p>
                   </div>
-                  <div className="absolute bottom-full left-0 mb-2 hidden group-hover:block w-64 bg-card border border-border/50 rounded-lg shadow-lg p-3 z-10">
-                    <p className="text-sm text-muted-foreground">
-                      {service.description}
-                    </p>
-                  </div>
-                  <p className="text-sm text-muted-foreground group-hover:hidden">
-                    Hover for details
-                  </p>
-                </div>
-              ))}
+                ))}
+              </div>
+              <div className="mt-8 text-center">
+                <Link to="/booking">
+                  <Button variant="hero">
+                    <Sparkles className="w-4 h-4" />
+                    Book Pedicure Service
+                  </Button>
+                </Link>
+              </div>
             </div>
 
-            {/* Book This Service Button for Kids Menu */}
-            <div className="mt-8">
-              <Link to="/booking">
-                <Button variant="hero" className="w-full">
-                  <Sparkles className="w-4 h-4" />
-                  Book This Service
-                </Button>
-              </Link>
+            {/* Acrylic Services */}
+            <div className="mb-16">
+              <h3 className="font-serif text-2xl font-semibold text-plum mb-6 text-center">
+                Acrylic
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {acrylicServices.map((service) => (
+                  <div
+                    key={service.name}
+                    className="bg-card rounded-xl border border-border/50 p-6 transition-all duration-300 hover:shadow-lg group relative"
+                  >
+                    <div className="flex justify-between items-start mb-2">
+                      <h4 className="font-medium text-foreground">
+                        {service.name}
+                      </h4>
+                      <p className="font-serif text-xl font-semibold text-gold">
+                        {service.price}
+                      </p>
+                    </div>
+                    <div className="absolute bottom-full left-0 mb-2 hidden group-hover:block w-64 bg-card border border-border/50 rounded-lg shadow-lg p-3 z-10">
+                      <p className="text-sm text-muted-foreground">
+                        {service.description}
+                      </p>
+                    </div>
+                    <p className="text-sm text-muted-foreground group-hover:hidden">
+                      Hover for details
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 text-center">
+                <Link to="/booking">
+                  <Button variant="hero">
+                    <Sparkles className="w-4 h-4" />
+                    Book Acrylic Service
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Organic Dipping Powder Services */}
+            <div className="mb-16">
+              <h3 className="font-serif text-2xl font-semibold text-plum mb-6 text-center">
+                Organic Dipping Powder
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {organicDippingPowderServices.map((service) => (
+                  <div
+                    key={service.name}
+                    className="bg-card rounded-xl border border-border/50 p-6 transition-all duration-300 hover:shadow-lg group relative"
+                  >
+                    <div className="flex justify-between items-start mb-2">
+                      <h4 className="font-medium text-foreground">
+                        {service.name}
+                      </h4>
+                      <p className="font-serif text-xl font-semibold text-gold">
+                        {service.price}
+                      </p>
+                    </div>
+                    <div className="absolute bottom-full left-0 mb-2 hidden group-hover:block w-64 bg-card border border-border/50 rounded-lg shadow-lg p-3 z-10">
+                      <p className="text-sm text-muted-foreground">
+                        {service.description}
+                      </p>
+                    </div>
+                    <p className="text-sm text-muted-foreground group-hover:hidden">
+                      Hover for details
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 text-center">
+                <Link to="/booking">
+                  <Button variant="hero">
+                    <Sparkles className="w-4 h-4" />
+                    Book Organic Dipping Powder Service
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Gel X Services */}
+            <div>
+              <h3 className="font-serif text-2xl font-semibold text-plum mb-6 text-center">
+                Gel X
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {gelXServices.map((service) => (
+                  <div
+                    key={service.name}
+                    className="bg-card rounded-xl border border-border/50 p-6 transition-all duration-300 hover:shadow-lg group relative"
+                  >
+                    <div className="flex justify-between items-start mb-2">
+                      <h4 className="font-medium text-foreground">
+                        {service.name}
+                      </h4>
+                      <p className="font-serif text-xl font-semibold text-gold">
+                        {service.price}
+                      </p>
+                    </div>
+                    <div className="absolute bottom-full left-0 mb-2 hidden group-hover:block w-64 bg-card border border-border/50 rounded-lg shadow-lg p-3 z-10">
+                      <p className="text-sm text-muted-foreground">
+                        {service.description}
+                      </p>
+                    </div>
+                    <p className="text-sm text-muted-foreground group-hover:hidden">
+                      Hover for details
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 text-center">
+                <Link to="/booking">
+                  <Button variant="hero">
+                    <Sparkles className="w-4 h-4" />
+                    Book Gel X Service
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

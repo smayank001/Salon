@@ -21,13 +21,8 @@ import {
   ChevronRight,
 } from "lucide-react";
 
-type ServiceCategory =
-  | "nails"
-  | "facials"
-  | "lashes"
-  | "waxing"
-  | "manicures-pedicures";
-
+type ServiceCategory = "facials" | "lashes" | "waxing" | "nails";
+// | "manicures-pedicures";
 // Add this interface to define the service structure
 interface Service {
   id: string;
@@ -39,221 +34,6 @@ interface Service {
 
 // Update the serviceOptions type to include new services
 const serviceOptions: Record<ServiceCategory, Service[]> = {
-  nails: [
-    // Manicure Services
-    {
-      id: "classic-mani",
-      name: "Classic Manicure",
-      price: 25,
-      duration: "",
-    },
-    {
-      id: "deluxe-mani",
-      name: "Deluxe Manicure",
-      price: 40,
-      duration: "",
-    },
-    {
-      id: "add-gel-polish-mani",
-      name: "Add Gel Polish to Any Manicure",
-      price: 15,
-      duration: "",
-    },
-
-    // Princess Menu
-    {
-      id: "princess-mani",
-      name: "Princess Manicure",
-      price: 20,
-      duration: "",
-    },
-    {
-      id: "princess-pedi",
-      name: "Princess Pedicure",
-      price: 30,
-      duration: "",
-    },
-    {
-      id: "princess-combo",
-      name: "Princess Combo",
-      price: 40,
-      duration: "",
-    },
-
-    // Pedicure Services
-    {
-      id: "classic-pedi",
-      name: "Classic Pedicure",
-      price: 40,
-      duration: "",
-    },
-    {
-      id: "deluxe-pedi",
-      name: "Deluxe Pedicure",
-      price: 52,
-      duration: "",
-    },
-    {
-      id: "hot-spring-pedi",
-      name: "Hot Spring Organic Spa Pedicure",
-      price: 57,
-      duration: "",
-    },
-    {
-      id: "signature-pedi",
-      name: "Signature Pedicure",
-      price: 62,
-      duration: "",
-    },
-    {
-      id: "ultimate-pedi",
-      name: "Ultimate Pedicure",
-      price: 72,
-      duration: "",
-    },
-    {
-      id: "add-gel-polish-pedi",
-      name: "Add Gel Polish to Any Pedicure",
-      price: 15,
-      duration: "",
-    },
-
-    // Additional Nail Services
-    {
-      id: "polish-change-hands",
-      name: "Polish Change (Hands)",
-      price: 10,
-      duration: "",
-    },
-    {
-      id: "polish-change-toes",
-      name: "Polish Change (Toes)",
-      price: 12,
-      duration: "",
-    },
-    {
-      id: "remove-gel-polish",
-      name: "Remove Gel Polish",
-      price: 15,
-      duration: "",
-    },
-    {
-      id: "remove-dip-powder",
-      name: "Remove Dip Powder",
-      price: 12,
-      duration: "",
-    },
-    {
-      id: "nail-repair",
-      name: "Nail Repair",
-      price: 5,
-      duration: "",
-    },
-    {
-      id: "paraffin-hands-feet",
-      name: "Paraffin Hands / Feet",
-      price: 12,
-      duration: "",
-    },
-    {
-      id: "gel-polish-change-hands",
-      name: "Gel Polish Change (Hands)",
-      price: 25,
-      duration: "",
-    },
-    {
-      id: "gel-polish-change-toes",
-      name: "Gel Polish Change (Toes)",
-      price: 30,
-      duration: "",
-    },
-    {
-      id: "medium-shape",
-      name: "Medium Shape",
-      price: 5,
-      duration: "",
-    },
-
-    // Repair Nails services
-    { id: "repair-1-finger", name: "1 Finger", price: 2, duration: "" },
-    { id: "repair-2-fingers", name: "2 Fingers", price: 5, duration: "" },
-    { id: "repair-3-fingers", name: "3 Fingers", price: 7, duration: "" },
-    {
-      id: "repair-4-fingers",
-      name: "4 Fingers",
-      price: 10,
-      duration: "",
-    },
-    {
-      id: "repair-5-fingers-design",
-      name: "5 Fingers Design",
-      price: 13,
-      duration: "",
-    },
-    {
-      id: "repair-6-fingers-design",
-      name: "6 Fingers Design",
-      price: 16,
-      duration: "",
-    },
-    {
-      id: "repair-7-fingers-design",
-      name: "7 Fingers Design",
-      price: 17,
-      duration: "",
-    },
-    {
-      id: "repair-8-fingers-design",
-      name: "8 Fingers Design",
-      price: 20,
-      duration: "",
-    },
-    {
-      id: "repair-9-fingers",
-      name: "9 Fingers",
-      price: 23,
-      duration: "",
-    },
-    {
-      id: "repair-10-fingers-design",
-      name: "10 Fingers Design",
-      price: 25,
-      duration: "",
-    },
-
-    // Kids Menu services
-    {
-      id: "kid-princess-mani",
-      name: "Princess Mani",
-      price: 15,
-      duration: "",
-    },
-    {
-      id: "kid-princess-pedi",
-      name: "Princess Pedi",
-      price: 25,
-      duration: "",
-    },
-    {
-      id: "kid-princess-combo",
-      name: "Princess Combo",
-      price: 35,
-      duration: "",
-    },
-    {
-      id: "kid-polish-change-hand",
-      name: "Kid Polish Change Hand",
-      price: 7,
-      duration: "",
-    },
-    {
-      id: "kid-polish-change-toes",
-      name: "Kid Polish Change Toes",
-      price: 7,
-      duration: "",
-    },
-    { id: "add-gel-kids", name: "Add Gel", price: 10, duration: "" },
-  ],
   facials: [
     {
       id: "express-facial",
@@ -435,147 +215,194 @@ const serviceOptions: Record<ServiceCategory, Service[]> = {
     { id: "half-arms", name: "Half Arms", price: 37, duration: "" },
     { id: "bikini", name: "Bikini", price: 52, duration: "", womenOnly: true },
   ],
-  "manicures-pedicures": [
+  nails: [
     // Manicure Services
-    { id: "basic-mani", name: "Basic Manicure", price: 25, duration: "30 min" },
     {
-      id: "color-gel-mani",
-      name: "Color Gel Manicure",
-      price: 45,
+      id: "classic-manicure",
+      name: "Classic Manicure",
+      price: 25,
+      duration: "30 min",
+    },
+    {
+      id: "deluxe-manicure",
+      name: "Deluxe Manicure",
+      price: 40,
       duration: "45 min",
     },
     {
-      id: "powder-gel-mani",
-      name: "Powder Gel Manicure",
-      price: 55,
-      duration: "50 min",
-    },
-    {
-      id: "powder-gel-ext",
-      name: "Powder Gel with Extensions",
-      price: 75,
-      duration: "75 min",
-    },
-    {
-      id: "polish-change",
-      name: "Polish Change",
-      price: 10,
+      id: "add-gel-polish-to-any-manicure",
+      name: "Add Gel Polish to Any Manicure",
+      price: 15,
       duration: "15 min",
     },
-    { id: "soak-off", name: "Soak Off", price: 20, duration: "20 min" },
+    // Princess Menu
     {
-      id: "enhancement-removal",
-      name: "Enhancement Removal",
+      id: "princess-manicure",
+      name: "Princess Manicure",
+      price: 20,
+      duration: "20 min",
+    },
+    {
+      id: "princess-pedicure",
+      name: "Princess Pedicure",
       price: 30,
       duration: "30 min",
     },
     {
-      id: "acrylic-ext",
-      name: "Acrylic Extensions",
-      price: 90,
-      duration: "90 min",
+      id: "princess-combo",
+      name: "Princess Combo",
+      price: 40,
+      duration: "50 min",
+    },
+    // Pedicure Services
+    {
+      id: "classic-pedicure",
+      name: "Classic Pedicure",
+      price: 40,
+      duration: "45 min",
     },
     {
-      id: "acrylic-maint",
-      name: "Acrylic Maintenance",
-      price: 50,
+      id: "deluxe-pedicure",
+      name: "Deluxe Pedicure",
+      price: 52,
       duration: "60 min",
     },
     {
-      id: "hard-gel-ext",
-      name: "Hard Gel Extensions",
-      price: 120,
-      duration: "90 min",
+      id: "hot-spring-organic-spa-pedicure",
+      name: "Hot Spring Organic Spa Pedicure",
+      price: 57,
+      duration: "45 min",
     },
     {
-      id: "hard-gel-maint",
-      name: "Hard Gel Maintenance",
+      id: "signature-pedicure",
+      name: "Signature Pedicure",
+      price: 62,
+      duration: "50 min",
+    },
+    {
+      id: "ultimate-pedicure",
+      name: "Ultimate Pedicure",
+      price: 72,
+      duration: "60 min",
+    },
+    {
+      id: "add-gel-polish-to-any-pedicure",
+      name: "Add Gel Polish to Any Pedicure",
+      price: 15,
+      duration: "15 min",
+    },
+    // Acrylic Services
+    {
+      id: "acrylic-full-set",
+      name: "Acrylic Full Set",
+      price: 38,
+      duration: "60 min",
+    },
+    // Organic Dipping Powder Services
+    {
+      id: "over-natural-nails",
+      name: "Over Natural Nails",
+      price: 48,
+      duration: "60 min",
+    },
+    // Gel X Services
+    {
+      id: "full-set-gel-x",
+      name: "Full Set (Gel X)",
       price: 65,
       duration: "75 min",
     },
-
-    // Pedicure Services
-    { id: "basic-pedi", name: "Basic Pedicure", price: 35, duration: "45 min" },
     {
-      id: "pedi-polish-change",
-      name: "Pedicure Polish Change",
-      price: 15,
-      duration: "20 min",
-    },
-    {
-      id: "add-gel-pedi",
-      name: "Add Gel Polish (Pedicure)",
-      price: 20,
-      duration: "",
-    },
-    {
-      id: "remove-gel-pedi",
-      name: "Remove Gel Polish (Pedicure)",
-      price: 10,
-      duration: "",
-    },
-    {
-      id: "callus-removal-pedi",
-      name: "Callus Removal (Pedicure)",
-      price: 10,
-      duration: "",
-    },
-    {
-      id: "hot-stone-pedi",
-      name: "Extra Massage with Hot Stone (Pedicure)",
-      price: 15,
-      duration: "",
-    },
-    {
-      id: "vegan-spa-4",
-      name: "Vegan Spa 4 Step",
-      price: 50,
+      id: "fill-in-gel-x",
+      name: "Fill In (Gel X)",
+      price: 55,
       duration: "60 min",
     },
     {
-      id: "vegan-spa-6",
-      name: "Vegan Spa 6 Step",
-      price: 60,
-      duration: "75 min",
+      id: "with-manicure-add",
+      name: "With Manicure Add",
+      price: 10,
+      duration: "30 min",
     },
-
-    // Add-ons
-    {
-      id: "french-design",
-      name: "French & 2-Finger Design (Add-On)",
-      price: 0,
-      duration: "",
-    },
-    {
-      id: "infinite-shine",
-      name: "Infinite Shine Polish (Add-On)",
-      price: 5,
-      duration: "",
-    },
-    {
-      id: "10-finger-design",
-      name: "10 Finger Design (Add-On)",
-      price: 20,
-      duration: "",
-    },
-    {
-      id: "quick-dry",
-      name: "Quick Dry / Nail Strengthener",
-      price: 0,
-      duration: "",
-    },
-    {
-      id: "nail-repair",
-      name: "Nail Repair (Per Nail)",
-      price: 0,
-      duration: "",
-    },
-    { id: "glue-powder", name: "Glue & Powder Add-On", price: 5, duration: "" },
-    { id: "acrylic-addon", name: "Acrylic Add-On", price: 9, duration: "" },
-    { id: "hard-gel-addon", name: "Hard Gel Add-On", price: 12, duration: "" },
   ],
+  // "manicures-pedicures": [
+  //   // Manicure Services
+  //   {
+  //     id: "mp-classic-manicure",
+  //     name: "Classic Manicure",
+  //     price: 25,
+  //     duration: "30 min",
+  //   },
+  //   {
+  //     id: "mp-deluxe-manicure",
+  //     name: "Deluxe Manicure",
+  //     price: 40,
+  //     duration: "45 min",
+  //   },
+  //   {
+  //     id: "mp-add-gel-polish-to-any-manicure",
+  //     name: "Add Gel Polish to Any Manicure",
+  //     price: 15,
+  //     duration: "15 min",
+  //   },
+  //   // Princess Menu
+  //   {
+  //     id: "mp-princess-manicure",
+  //     name: "Princess Manicure",
+  //     price: 20,
+  //     duration: "20 min",
+  //   },
+  //   {
+  //     id: "mp-princess-pedicure",
+  //     name: "Princess Pedicure",
+  //     price: 30,
+  //     duration: "30 min",
+  //   },
+  //   {
+  //     id: "mp-princess-combo",
+  //     name: "Princess Combo",
+  //     price: 40,
+  //     duration: "50 min",
+  //   },
+  //   // Pedicure Services
+  //   {
+  //     id: "mp-classic-pedicure",
+  //     name: "Classic Pedicure",
+  //     price: 40,
+  //     duration: "45 min",
+  //   },
+  //   {
+  //     id: "mp-deluxe-pedicure",
+  //     name: "Deluxe Pedicure",
+  //     price: 52,
+  //     duration: "60 min",
+  //   },
+  //   {
+  //     id: "mp-hot-spring-organic-spa-pedicure",
+  //     name: "Hot Spring Organic Spa Pedicure",
+  //     price: 57,
+  //     duration: "45 min",
+  //   },
+  //   {
+  //     id: "mp-signature-pedicure",
+  //     name: "Signature Pedicure",
+  //     price: 62,
+  //     duration: "50 min",
+  //   },
+  //   {
+  //     id: "mp-ultimate-pedicure",
+  //     name: "Ultimate Pedicure",
+  //     price: 72,
+  //     duration: "60 min",
+  //   },
+  //   {
+  //     id: "mp-add-gel-polish-to-any-pedicure",
+  //     name: "Add Gel Polish to Any Pedicure",
+  //     price: 15,
+  //     duration: "15 min",
+  //   },
+  // ],
 };
-
 const timeSlots = ["9:30 AM - 7:30 PM"];
 
 const Booking = () => {
@@ -594,11 +421,6 @@ const Booking = () => {
 
   const categories = [
     {
-      id: "nails" as ServiceCategory,
-      name: "Nails",
-      icon: <Gem className="w-6 h-6" />,
-    },
-    {
       id: "facials" as ServiceCategory,
       name: "Facials",
       icon: <Flower2 className="w-6 h-6" />,
@@ -614,12 +436,11 @@ const Booking = () => {
       icon: <Heart className="w-6 h-6" />,
     },
     {
-      id: "manicures-pedicures" as ServiceCategory,
-      name: "Manicures & Pedicures",
-      icon: <Sparkles className="w-6 h-6" />,
+      id: "nails" as ServiceCategory,
+      name: "Nails",
+      icon: <Gem className="w-6 h-6" />,
     },
   ];
-
   const toggleService = (serviceId: string) => {
     setSelectedServices((prev) =>
       prev.includes(serviceId)
@@ -793,7 +614,7 @@ Thank you!
                   </p>
 
                   {/* Categories */}
-                  <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
                     {categories.map((cat) => (
                       <button
                         key={cat.id}

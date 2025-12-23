@@ -100,6 +100,30 @@ const organicDippingPowderServices = [
   },
 ];
 
+// Gel Builder Services
+const gelBuilderServices = [
+  {
+    name: "Full Set (Gel Builder)",
+    price: "$65",
+    description: "Full Gel Builder nail extensions",
+  },
+  // {
+  //   name: "Add Gel",
+  //   price: "$15",
+  //   description: "Gel enhancement for Full Set (Gel Builder)",
+  // },
+  {
+    name: "Fill In (Gel Builder)",
+    price: "$50",
+    description: "Gel Builder fill-in service",
+  },
+  {
+    name: "Add Gel",
+    price: "$15",
+    description: "Gel enhancement for Fill In (Gel Builder)",
+  },
+];
+
 // Gel X Services
 const gelXServices = [
   {
@@ -107,10 +131,20 @@ const gelXServices = [
     price: "$65",
     description: "Full Gel X nail extensions",
   },
+  // {
+  //   name: "Add Gel",
+  //   price: "$15",
+  //   description: "Gel enhancement for Full Set (Gel X)",
+  // },
   {
     name: "Fill In (Gel X)",
     price: "$55",
     description: "Gel X fill-in service",
+  },
+  {
+    name: "Add Gel",
+    price: "$15",
+    description: "Gel enhancement for Fill In (Gel X)",
   },
   {
     name: "With Manicure Add",
@@ -344,6 +378,46 @@ const Nails = () => {
                   <Button variant="hero">
                     <Sparkles className="w-4 h-4" />
                     Book Organic Dipping Powder Service
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Gel Builder Services */}
+            <div className="mb-16">
+              <h3 className="font-serif text-2xl font-semibold text-plum mb-6 text-center">
+                Gel Builder
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {gelBuilderServices.map((service) => (
+                  <div
+                    key={service.name}
+                    className="bg-card rounded-xl border border-border/50 p-6 transition-all duration-300 hover:shadow-lg group relative"
+                  >
+                    <div className="flex justify-between items-start mb-2">
+                      <h4 className="font-medium text-foreground">
+                        {service.name}
+                      </h4>
+                      <p className="font-serif text-xl font-semibold text-gold">
+                        {service.price}
+                      </p>
+                    </div>
+                    <div className="absolute bottom-full left-0 mb-2 hidden group-hover:block w-64 bg-card border border-border/50 rounded-lg shadow-lg p-3 z-10">
+                      <p className="text-sm text-muted-foreground">
+                        {service.description}
+                      </p>
+                    </div>
+                    <p className="text-sm text-muted-foreground group-hover:hidden">
+                      Hover for details
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 text-center">
+                <Link to="/booking">
+                  <Button variant="hero">
+                    <Sparkles className="w-4 h-4" />
+                    Book Gel Builder Service
                   </Button>
                 </Link>
               </div>

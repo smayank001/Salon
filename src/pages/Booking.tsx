@@ -230,6 +230,18 @@ const serviceOptions: Record<ServiceCategory, Service[]> = {
       duration: "45 min",
     },
     {
+      id: "full-set-manicure",
+      name: "Full Set (Manicure)",
+      price: 45,
+      duration: "50 min",
+    },
+    {
+      id: "add-gel-manicure",
+      name: "Add Gel",
+      price: 15,
+      duration: "15 min",
+    },
+    {
       id: "add-gel-polish-to-any-manicure",
       name: "Add Gel Polish to Any Manicure",
       price: 15,
@@ -286,6 +298,18 @@ const serviceOptions: Record<ServiceCategory, Service[]> = {
       duration: "60 min",
     },
     {
+      id: "full-set-pedicure",
+      name: "Full Set (Pedicure)",
+      price: 50,
+      duration: "55 min",
+    },
+    {
+      id: "add-gel-pedicure",
+      name: "Add Gel",
+      price: 15,
+      duration: "15 min",
+    },
+    {
       id: "add-gel-polish-to-any-pedicure",
       name: "Add Gel Polish to Any Pedicure",
       price: 15,
@@ -305,6 +329,31 @@ const serviceOptions: Record<ServiceCategory, Service[]> = {
       price: 48,
       duration: "60 min",
     },
+    // Gel Builder Services
+    {
+      id: "full-set-gel-builder",
+      name: "Full Set (Gel Builder)",
+      price: 65,
+      duration: "75 min",
+    },
+    {
+      id: "add-gel-full-set-gel-builder",
+      name: "Add Gel",
+      price: 15,
+      duration: "15 min",
+    },
+    {
+      id: "fill-in-gel-builder",
+      name: "Fill In (Gel Builder)",
+      price: 50,
+      duration: "60 min",
+    },
+    {
+      id: "add-gel-fill-in-gel-builder",
+      name: "Add Gel",
+      price: 15,
+      duration: "15 min",
+    },
     // Gel X Services
     {
       id: "full-set-gel-x",
@@ -313,16 +362,52 @@ const serviceOptions: Record<ServiceCategory, Service[]> = {
       duration: "75 min",
     },
     {
+      id: "add-gel-full-set-gel-x",
+      name: "Add Gel",
+      price: 15,
+      duration: "15 min",
+    },
+    {
       id: "fill-in-gel-x",
       name: "Fill In (Gel X)",
       price: 55,
       duration: "60 min",
     },
     {
+      id: "add-gel-fill-in-gel-x",
+      name: "Add Gel",
+      price: 15,
+      duration: "15 min",
+    },
+    {
       id: "with-manicure-add",
       name: "With Manicure Add",
       price: 10,
       duration: "30 min",
+    },
+    {
+      id: "full-set-manicure-services",
+      name: "Full Set (Manicure)",
+      price: 45,
+      duration: "50 min",
+    },
+    {
+      id: "add-gel-manicure-services",
+      name: "Add Gel",
+      price: 15,
+      duration: "15 min",
+    },
+    {
+      id: "full-set-pedicure-services",
+      name: "Full Set (Pedicure)",
+      price: 50,
+      duration: "55 min",
+    },
+    {
+      id: "add-gel-pedicure-services",
+      name: "Add Gel",
+      price: 15,
+      duration: "15 min",
     },
   ],
   // "manicures-pedicures": [

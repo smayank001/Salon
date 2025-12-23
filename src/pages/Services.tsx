@@ -580,6 +580,17 @@ const Services = () => {
 
                 <div className="p-4 flex flex-col sm:flex-row sm:items-center justify-between transition-colors group relative">
                   <div className="mb-2 sm:mb-0">
+                    <p className="font-medium text-foreground">Add Gel</p>
+                  </div>
+                  <div className="flex flex-col sm:items-end">
+                    <p className="font-serif text-xl font-semibold text-gold">
+                      $15
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-4 flex flex-col sm:flex-row sm:items-center justify-between transition-colors group relative">
+                  <div className="mb-2 sm:mb-0">
                     <p className="font-medium text-foreground">
                       Fill In (Gel Builder)
                     </p>
@@ -587,6 +598,16 @@ const Services = () => {
                   <div className="flex flex-col sm:items-end">
                     <p className="font-serif text-xl font-semibold text-gold">
                       $50
+                    </p>
+                  </div>
+                </div>
+                <div className="p-4 flex flex-col sm:flex-row sm:items-center justify-between transition-colors group relative">
+                  <div className="mb-2 sm:mb-0">
+                    <p className="font-medium text-foreground">Add Gel</p>
+                  </div>
+                  <div className="flex flex-col sm:items-end">
+                    <p className="font-serif text-xl font-semibold text-gold">
+                      $15
                     </p>
                   </div>
                 </div>
@@ -603,7 +624,6 @@ const Services = () => {
                     </p>
                   </div>
                 </div>
-
                 <div className="p-4 flex flex-col sm:flex-row sm:items-center justify-between transition-colors group relative">
                   <div className="mb-2 sm:mb-0">
                     <p className="font-medium text-foreground">
@@ -797,6 +817,32 @@ const Services = () => {
                     Hover for details
                   </p>
                 </div>
+
+                <div className="p-4 flex flex-col sm:flex-row sm:items-center justify-between transition-all duration-300 hover:shadow-lg group relative">
+                  <div className="mb-2 sm:mb-0">
+                    <p className="font-medium text-foreground">
+                      Full Set (Pedicure)
+                    </p>
+                  </div>
+                  <div className="flex flex-col sm:items-end">
+                    <p className="font-serif text-xl font-semibold text-gold">
+                      $50
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-4 flex flex-col sm:flex-row sm:items-center justify-between transition-all duration-300 hover:shadow-lg group relative">
+                  <div className="mb-2 sm:mb-0">
+                    <p className="font-medium text-foreground">
+                      Add Gel
+                    </p>
+                  </div>
+                  <div className="flex flex-col sm:items-end">
+                    <p className="font-serif text-xl font-semibold text-gold">
+                      $15
+                    </p>
+                  </div>
+                </div>
               </div>
               <div className="p-4 bg-blush/50">
                 <Link to="/booking">
@@ -827,6 +873,60 @@ const Services = () => {
                     </p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Manicures Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold text-plum mb-8 text-center">
+              Manicures
+            </h2>
+
+            <div className="bg-card rounded-2xl border border-border/50 overflow-hidden mb-8">
+              <div className="p-4 bg-blush border-b border-border/50">
+                <h3 className="font-serif text-lg font-semibold text-plum">
+                  Services & Pricing
+                </h3>
+              </div>
+              <div className="divide-y divide-border/50">
+                <div className="p-4 flex flex-col sm:flex-row sm:items-center justify-between transition-colors group relative">
+                  <div className="mb-2 sm:mb-0">
+                    <p className="font-medium text-foreground">
+                      Full Set (Manicure)
+                    </p>
+                  </div>
+                  <div className="flex flex-col sm:items-end">
+                    <p className="font-serif text-xl font-semibold text-gold">
+                      $45
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-4 flex flex-col sm:flex-row sm:items-center justify-between transition-colors group relative">
+                  <div className="mb-2 sm:mb-0">
+                    <p className="font-medium text-foreground">
+                      Add Gel
+                    </p>
+                  </div>
+                  <div className="flex flex-col sm:items-end">
+                    <p className="font-serif text-xl font-semibold text-gold">
+                      $15
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 bg-blush/50">
+                <Link to="/booking">
+                  <Button variant="hero" className="w-full">
+                    <Sparkles className="w-4 h-4" />
+                    Book This Service
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
